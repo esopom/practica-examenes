@@ -16,10 +16,14 @@ Actualmente incluye **11 exámenes con 681 preguntas**.
 ### Modos
 
 1. **Practicar** — elige examen y modo:
+   - Cada sesión usa **todas** las preguntas del examen (60, 63 o 65 según
+     cuál), siempre en orden aleatorio.
    - *Práctica libre*: feedback inmediato tras cada respuesta.
    - *Simulacro cronometrado*: sin feedback hasta el final, con tiempo límite.
    - Las preguntas de selección múltiple se corrigen por conjunto: hay que
-     marcar todas las correctas y ninguna incorrecta.
+     marcar todas las correctas y ninguna incorrecta. No se puede confirmar
+     hasta marcar exactamente el número de respuestas que pide la pregunta;
+     un aviso indica cuántas faltan o sobran.
 2. **Repasar falladas** — repetición espaciada (Leitner de 6 cajas). Solo
    aparecen las preguntas que ya tocan repasar.
 3. **Estadísticas** — precisión global, por examen y ranking de más falladas.

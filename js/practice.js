@@ -43,13 +43,13 @@ const Practice = (() => {
       return;
     }
     const mode = document.getElementById('practice-mode-select').value;
-    const numQuestions = document.getElementById('practice-num-questions').value;
     const timeLimitMin = document.getElementById('practice-time-limit').value;
 
     await beginSession({
       exam_id: examId,
       mode,
-      num_questions: numQuestions,
+      // Sin num_questions: la Api usa todas las preguntas del examen (que son
+      // 60, 63 o 65 según el examen), no un número fijo.
       time_limit_seconds: mode === 'timed' ? Number(timeLimitMin) * 60 : undefined,
       runnerEl: document.getElementById('practice-runner'),
       resultsEl: document.getElementById('practice-results'),

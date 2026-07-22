@@ -1,0 +1,760 @@
+{
+  "id": 3,
+  "name": "ADM201 Examen 3",
+  "source_filename": "ADM201 Examen 3.pdf",
+  "questions": [
+    {
+      "question_text": "What component in Salesforce is similar to a table of data?",
+      "options": [
+        "Record",
+        "Field",
+        "App",
+        "Object"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "How does a user navigate from an Account record to a related Contact record?",
+      "options": [
+        "Lookup Field",
+        "Related List",
+        "List View",
+        "Force.com App Menu"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Where can an administrator change the organization name and address, default locale, default language, and default time zone?",
+      "options": [
+        "Company Information",
+        "Organization–wide Settings",
+        "Business Hours",
+        "Language Settings"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which user interface settings must be enabled to allow users to edit records directly from a list view, without navigating away from the page?answers",
+      "options": [
+        "Enable Inline Editing",
+        "Enable Printable List Views",
+        "Enable Enhanced Profile List Views",
+        "Enable Enhanced Lists"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "What is a capability of Chatter?answers",
+      "options": [
+        "People can see Chatter feed updates on records they follow.",
+        "Customers can add posts to a public Chatter group.",
+        "All users can enable objects and fields for feed tracking.",
+        "People can @mention other people in a Chatter post"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "What is determined by the user's profile?answers",
+      "options": [
+        "Which tabs and apps are visible in the user interface.",
+        "Which currencies are available to users.",
+        "What users can do with records of a particular object.",
+        "Which individual records users can view and edit"
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "When creating a new user, what information is captured on the user record?answers",
+      "options": [
+        "Profile assigned to the user",
+        "List of apps that the user can access",
+        "Name, email address, and username of the user",
+        "User interface settings that can be enabled for the user"
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "Support users at AW Computing can view, create, and edit accounts. However, the management team does not want support users to delete accounts in the organization. How can an administrator meet this requirement?",
+      "options": [
+        "Assign the Standard User profile to support users.",
+        "Assign the Read Only profile to support users.",
+        "Create a custom profile that has the View All permissions enabled for the account object and assign the custom profile to support users.",
+        "Create a custom profile that has the Delete permission disabled for the account object and assign the custom profile to support users."
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "What should an administrator use to disable access to a custom application for a group of users?",
+      "options": [
+        "Profiles",
+        "Sharing rules",
+        "Web tabs",
+        "Page layouts"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Universal Containers needs to track the manufacturer and model for specific car companies. How can the administrator ensure that the manufacturer selected influences the values available for the model?",
+      "options": [
+        "Create the manufacturer field as a dependent picklist and the model as a controlling picklist.",
+        "Create a lookup field from the manufacturer object to the model object.",
+        "Create the manufacturer field as a controlling picklist and the model as a dependent picklist.",
+        "Create a multi–select picklist field that includes both manufacturers and models."
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Which statement about custom summary formulas in reports is true?answers",
+      "options": [
+        "Reports can be grouped by a customs summary formula result.",
+        "Custom summary formulas can reference a formula field within a report.",
+        "Custom summary formulas can reference another customer summary formula.",
+        "Custom summary formulas can be used in a report built from a custom report type."
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "What feature sets the default level of access users have to records they do not own, in each object?",
+      "options": [
+        "Sharing rules",
+        "Organization–wide defaults",
+        "Role hierarchy",
+        "Manual Sharing"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "What does field–level security control?",
+      "options": [
+        "Which fields are automatically generated by the system.",
+        "Which fields users can view and edit based on their profile.",
+        "Which fields are required in the user interface.",
+        "Which fields are encrypted to users based on their profile"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Universal Containers needs to allow a group of users to view account records that they do NOT own. Which feature can the system administrator use to meet this requirement?",
+      "options": [
+        "Field Level Security",
+        "Account record types",
+        "Sharing Rules",
+        "Public groups"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "What automatically occurs when a custom field is deleted?answers",
+      "options": [
+        "The field is removed from associated page layouts.",
+        "The field values are archived in the setup audit trail.",
+        "All field data is deleted.",
+        "The field is removed from associated workflow rules"
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "An administrator at AW Computing created custom fields on the Opportunity object for Discount Percentage and Amount after Discount. The sales team wants these fields to be grouped together on the opportunity record. How can an administrator meet this requirement?",
+      "options": [
+        "Create a new related list on the opportunity page layout and add the custom fields to the related list.",
+        "Create a new business process for opportunities that contain the custom fields.",
+        "Create a new section on the opportunity page layout and add the custom fields to the section.",
+        "Create a new record type for opportunities that contains the custom fields"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "An administrator created a validation rule to ensure that users do not change the Close Date of an opportunity to a day in the past. What happens when a user tries to save an opportunity that has a Close Date from last month?answers",
+      "options": [
+        "The validation failure is logged on the field history tracking related list.",
+        "The error message defined in the validation rule displays on the record.",
+        "The record will not save.",
+        "The user receives an email with the reason the validation rule failed."
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "What are the benefits of using the Data Import Wizard to import data into Salesforce?answers",
+      "options": [
+        "Import greater than 50,000 records.",
+        "Choose whether or not to trigger workflow rules.",
+        "Prevent duplicate records from entering the system.",
+        "Load data for all standard and custom objects."
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "How can an administrator prevent a former employee from logging in to the company's Salesforce organization and free up a user license?",
+      "options": [
+        "Delete the user record.",
+        "Overwrite the user record.",
+        "Freeze the user record.",
+        "Deactivate the user record."
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "An administrator at AW Computing incorrectly imported a set of records into Salesforce. Which tools can the administrator use to remove the records from Salesforce?answers",
+      "options": [
+        "Salesforce roll–back",
+        "Data loader",
+        "Mass delete records",
+        "Data Import Wizard"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "What report format displays a list of records sorted into groups with subtotals?",
+      "options": [
+        "Tabular",
+        "Summary",
+        "Matrix",
+        "Joined"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Which chart type can an administrator use to compare opportunity amounts by rep and then by stage?",
+      "options": [
+        "Gauge",
+        "Funnel",
+        "Stacked bar chart",
+        "Donut"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "What is determined by the running user of the dashboard?",
+      "options": [
+        "What data viewers of the dashboard will see.",
+        "Which users can access the dashboard.",
+        "Which users can access the source reports for the dashboard.",
+        "Which users can refresh a dashboard."
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "What options are available when setting the evaluation criteria for a workflow rule?answers",
+      "options": [
+        "Created, and any time it's edited to no longer meet criteria",
+        "Created",
+        "Created, and any time it's edited to subsequently meet criteria",
+        "Deleted"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "AW Computing wants the account owner to be notified when a high priority case is created for an account. How can an administrator accomplish this?",
+      "options": [
+        "Create a workflow rule to send an email alert to the account owner.",
+        "Enable field history tracking to send an email alert to the account owner.",
+        "Create an escalation rule to notify the account owner.",
+        "Create an auto–response rule to send an email alert to the account owner."
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "AW Computing wants to automate leads using a web–to–lead form. When a potential customer submits the form, the submitter should receive a customized email based on the lead source. How can an administrator meet this requirement?",
+      "options": [
+        "Map custom fields on the Lead object to custom fields on the Contact object.",
+        "Create assignment rules that email the submitter based on the lead source.",
+        "Create auto–response rules that send a different email for each lead source.",
+        "Create a workflow rule that uses different email alerts for each lead source."
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Which features are available with Salesforce Knowledge that are not available with Solutions?answers",
+      "options": [
+        "Chatter feed collaboration",
+        "Article types and data categories",
+        "Article versioning",
+        "Multi–language support"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "What are the capabilities of email–to–case?answers",
+      "options": [
+        "Triggers assignment rules, escalation rules, and workflow rules.",
+        "Automatically associates customer email replies with the case.",
+        "Uses the company's email address to associate an account with the case.",
+        "Automatically populates case fields based on data the customer enters on the website"
+      ],
+      "correct_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "question_text": "Which of the following types of packages can be upgraded?",
+      "options": [
+        "Unmanaged Packages",
+        "Managed Packages",
+        "Packages cannot be upgraded"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "What will occur when a system administrator creates a dynamic dashboard?",
+      "options": [
+        "The dashboard refreshes automatically whenever the underlying data changes",
+        "The data displayed varies based on the user viewing the dashboard",
+        "The dashboard components re–size based on the device users to view the dashboard",
+        "The dashboard automatically sends an email when the underlying data changes"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "What is the difference between the Marketing User Profile and the Marketing User checkbox at the User level?",
+      "options": [
+        "Marketing User Profile allows users to create and edit Campaigns Marketing User checkbox allows users to import Leads.",
+        "They are the same thing",
+        "Marketing User Profile allows users to import Leads. Marketing User checkbox allows users to create and edit Campaigns.",
+        "None of the Above"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "With the \"manage campaign\" button on campaign selected, what all can you do with the integrated campaign builder?answers",
+      "options": [
+        "Import new leads and add it to campaign",
+        "Associate opportunities to the campaign",
+        "Associate existing contacts to the campaign",
+        "Associate up to 50000 existing leads to the campaign"
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "Which permission is required to convert a lead?answers",
+      "options": [
+        "\"Transfer\" access for leads, accounts, contacts, and opportunities",
+        "\"Convert Leads\" profile permission",
+        "\"Import leads\" profile permission",
+        "\"Create\" and \"Edit\" access for leads, accounts, contacts, and opportunities"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "Criteria–based sharing rules can be created for which objects?answers",
+      "options": [
+        "Leads",
+        "Campaign Members",
+        "Contacts",
+        "Products",
+        "Accounts"
+      ],
+      "correct_indices": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "question_text": "A system administrator at Company A needs to mass update the lead source on a number of opportunity records. How can this be accomplished?answers",
+      "options": [
+        "Use similar opportunities to update the opportunities",
+        "Export opportunities and update using the import wizard",
+        "Create a list view for opportunities and update using inline editing",
+        "Export opportunities and update using the data loader"
+      ],
+      "correct_indices": [
+        2,
+        3
+      ]
+    },
+    {
+      "question_text": "You must meet the following prerequisites before enabling territory management:answers",
+      "options": [
+        "Your organization must be using customizable forecasting",
+        "Follow the steps in the Deploying Territory Management Guide to prepare your organization for territory management.",
+        "You must have the Marketing User Profile",
+        "You must have the Territory Manager Profile"
+      ],
+      "correct_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "question_text": "Who may be assigned a workflow task?answers",
+      "options": [
+        "An Account team role",
+        "A Sales Team Role",
+        "The Record owner",
+        "A single user",
+        "Multiple users",
+        "The Record creator"
+      ],
+      "correct_indices": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "question_text": "Which of the following cannot be on the controlling side of the Dependent Picklist?",
+      "options": [
+        "Standard Picklist",
+        "Checkbox",
+        "Multi–Select Picklist",
+        "Custom Picklist"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Which of the field types cannot be used as an External Id?answers",
+      "options": [
+        "Text Field",
+        "Number Field",
+        "Picklist Field",
+        "Email Id Field",
+        "URL"
+      ],
+      "correct_indices": [
+        2,
+        4
+      ]
+    },
+    {
+      "question_text": "Sales representatives at Universal Containers should be notified any time support cases related to accounts they own change status. How can a system administrator accomplish this?",
+      "options": [
+        "Enable field history tracking to send an email alert to the account owner",
+        "Create a workflow rule to send an email alert to the account owner",
+        "Create an escalation rule to notify the account owner",
+        "Create an auto-response rule to send an email alert to the account owner"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "What can a marketing user do using the Manage Members button on a campaign record?answers",
+      "options": [
+        "Create a custom report including all campaign members",
+        "Import new leads and associate them with the campaigns",
+        "Associate existing opportunities with the campaign",
+        "Associate existing contacts with the campaign"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "Which feature restricts a user's ability to log into Salesforce?answers",
+      "options": [
+        "Trusted IP ranges",
+        "Login hours",
+        "Login IP ranges",
+        "Password policies"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "What is used to create a relationship between an Opportunity object and a Campaign object?answers",
+      "options": [
+        "Campaign hierarchy fields",
+        "Campaign influence related list",
+        "Opportunity sales process",
+        "Primary campaign source field"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "An administrator created two picklist fields: candy manufacturer (hershey, mars) and candy type (snickers, milky way, reeces pieces, m&ms). Is it possible to relate the fields together so that the candy manufacturer field could impact the choices listed in the candy type field?",
+      "options": [
+        "Yes, the Candy Manufacturer is a dependent picklist, and the Candy Type is a controlling picklist,",
+        "Yes, the Candy Manufacturer is a controlling picklist and the Candy Type is a dependent picklist,",
+        "Yes, the Candy Manufacturer is a Master and the Candy Type is the Detail,",
+        "No, because they are both custom fields",
+        "No, because they are both pick fields"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "What statements is not true for a workflow task",
+      "options": [
+        "Historical tracking is allowed for workflow task",
+        "A single task can be assigned to multiple users",
+        "The due dates for workflow task is based on number of calendar days, The rule fails to recognize only working business days by default",
+        "To assign tasks to multiple users, create multiple tasks as outcomes of the rule"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "When configuring Customizable Forecasting, you can set which of the following Forecast Dates for determining which opportunities contribute to the forecast?",
+      "options": [
+        "Opportunity Close Date Only",
+        "Product Date Only",
+        "Schedule Date Only",
+        "Commit Date",
+        "Opportunity Close Date, Product Date, Schedule Date"
+      ],
+      "correct_indices": [
+        4
+      ]
+    },
+    {
+      "question_text": "You are working with a Professional Edition organization. They wish to install the Expense Tracker which requires the use of 4 custom tabs, 3 custom objects, and one custom app. If the company is already using 4 applications, 36 custom objects, and 7 custom tabs, what will happen when they try to install Expense Tracker?",
+      "options": [
+        "They will not be able to complete the installation process as they have reached the maximum number of custom tabs",
+        "They will not be able to complete the installation process as they have reached the maximum number of custom objects",
+        "The installation will succeed",
+        "The installation will succeed, but only the reports, dashboards and S Control will install"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which of the following object relationships is NOT allowed?",
+      "options": [
+        "Standard object as the \"master\" and a custom object as the detail",
+        "Custom object as the “master\" and a standard object as the detail",
+        "Custom object as a lookup to a standard object",
+        "Custom object as a lookup to a custom object"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "All of the following are true about Default Sales Teams EXCEPT:",
+      "options": [
+        "Default Sales Teams are configured on a user record",
+        "Default Sales Teams may be added manually to an opportunity record",
+        "Default Sales Teams may be added automatically to an opportunity",
+        "Default Sales Teams may be added manually to an account record"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Auto Response rules work on which objects?",
+      "options": [
+        "Leads and Cases",
+        "Leads and Accounts",
+        "Accounts and Opportunity",
+        "Account and Cases"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which one of the following is a salesforce.com definition for a Lead?",
+      "options": [
+        "Any person, organization or company that may be interested in your products and services, that are not yet customers",
+        "An organization, individual or company involved with your business such as customers, competitors and partners",
+        "Any potential revenue-generating event i.e. “sales deal”",
+        "Any individual or influencer associated with an account"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "An administrator notices there are too many duplicate records, numerous sharing rules, and a large number of manually shared records. Which situation may this be a symptom of?",
+      "options": [
+        "Role hierarchy that has too few roles.",
+        "Sharing model that is too public.",
+        "Sharing model that is too private.",
+        "Object permissions on profiles that are too restrictive."
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "In Salesforce Territory Management, which statement describes how a territory hierarchy is different from a role hierarchy?",
+      "options": [
+        "Territory hierarchy grants login access to all users in a territory.",
+        "Territory hierarchy supports assigning users to multiple territories.",
+        "Territory hierarchy automatically assigns users to sales teams in the territory.",
+        "Territory hierarchy gives users in a territory full edit access to all accounts in that territory."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "___let(s) you segment your organization's data into logical sections, making searches, reports, and list views more meaningful to users.",
+      "options": [
+        "Territory Management",
+        "Custom Settings",
+        "Divisions",
+        "None of the Above"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "What is the Impact on a User of the Organization level Locale Changes?",
+      "options": [
+        "The default Locale of the user is also set to the new Organization Level locale",
+        "The User is asked for a Choice; if he would like to choose New Organization Locale or his own Locale",
+        "No Impact on the User as he keeps using his own default Locale",
+        "From a new session, user will see everything in the New Organization Locale"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "API’s are not available for use in which Salesforce.com edition?",
+      "options": [
+        "Developer Edition",
+        "Professional edition",
+        "Enterprise Edition",
+        "Unlimited edition"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Which Type of Reports can't be used to create groups of data or charts?",
+      "options": [
+        "Tabular",
+        "Summary",
+        "Matrix",
+        "Joined"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Conditional highlighting cannot be used for?",
+      "options": [
+        "Tabular Reports",
+        "Summary Reports",
+        "Matrix Reports",
+        "Joined Reports"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "How many ranges can be defined in the case of a Conditional Highlighting?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Which function is available in the report builder interface, prior to running the report? 2 ANSWERS",
+      "options": [
+        "Save",
+        "Printable view",
+        "Schedule future runs",
+        "Show/hide details",
+        "Export details RESPUESTAS"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    }
+  ]
+}

@@ -1,0 +1,776 @@
+{
+  "id": 2,
+  "name": "ADM201 Examen 2",
+  "source_filename": "ADM201 Examen 2.pdf",
+  "questions": [
+    {
+      "question_text": "A sales user at Universal Container has updated the opportunity stage for an opportunity in the pipeline. What may be updated as a result of the stage change?",
+      "options": [
+        "Sales quota",
+        "Account rating",
+        "Forecast category",
+        "Probability"
+      ],
+      "correct_indices": [
+        2,
+        3
+      ]
+    },
+    {
+      "question_text": "A sales executive at Universal Containers wants to be notified whenever high-value opportunities are created for hot accounts. How should an admin meet this requirement?",
+      "options": [
+        "Create the workflow rule on opportunity object",
+        "Create an escalation rule based on the opportunity amount",
+        "Create an auto-response rule based on the opportunity amount",
+        "create a validation rule that evaluates the account rating"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "The sales team at Universal Container wants an easy solution to gather customer requirements and share presentations with their customers. What should an admin do to help the sales team achieve this goal?",
+      "options": [
+        "Add customers to private chatter groups",
+        "Use chatter files to share presentations",
+        "Add customers to libraries",
+        "Create opportunity teams for customers"
+      ],
+      "correct_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "question_text": "Which statement about sharing rules is true?",
+      "options": [
+        "Sharing rules open up access of records",
+        "Sharing rules are required in public read/write organizations",
+        "Sharing rules grant delete access to records",
+        "Sharing rules grant record access to roles and public groups"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "What must an admin do when creating a record type?",
+      "options": [
+        "Set the field level security for the record type",
+        "Create a new page layout for the record type",
+        "Assign the record type to the appropriate profiles",
+        "Add the record type to the required user records"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "What is a capability of Salesforce Knowledge?",
+      "options": [
+        "Knowledge allows an organization to share articles with partner portal users",
+        "Knowledge only allows a single article type across all data categories",
+        "Knowledge automatically creates a solution for each new article",
+        "Knowledge uses data categories and roles to make articles visible to the specific users"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Container is using a private sharing model. The U.S. sales director needs full access to all records owned by the U.S. sales representatives. How can this be accomplished?",
+      "options": [
+        "Define a role hierarchy where the U.S sales director rolls up to the CEO",
+        "Define a role hierarchy where the U.S. sales representatives roll up to the sales director",
+        "Give the U.S. sales director read/write/edit/delete object permission on the profile",
+        "Place the U.S. sales director in a queue with the U.S. sales representatives"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "What will occur when a system admin creates a dynamic dashboard?",
+      "options": [
+        "The data displayed varies based on the user viewing the dashboard",
+        "The dashboard component resizes based on the device used to view it",
+        "The dashboard automatically sends an email when the underlying data changes",
+        "The dashboard refreshes automatically whenever the underlying data changes"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "A time-dependent action is placed in the workflow queue when the record is created. When will the action be removed from the queue?",
+      "options": [
+        "When the record no longer matches the rule criteria",
+        "When a validation rule triggered for the record",
+        "When another record triggers the same workflow rule",
+        "When the action is deleted from the workflow queue"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "What permission is set in a user profile?",
+      "options": [
+        "Object permissions",
+        "Active",
+        "Run reports",
+        "Mass email",
+        "Marketing user"
+      ],
+      "correct_indices": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "question_text": "Which statement is true regarding an approval process?",
+      "options": [
+        "An approval action defines the result of record approval or rejection",
+        "A delegated approver can reassign approval requests",
+        "The approval-history related list can be used to track the process",
+        "An assignment rule defines the approver for each process step"
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "What is affected by changing the default locale setting for an organization?",
+      "options": [
+        "Language",
+        "Date fields",
+        "Currency",
+        "Time zone"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "What will happen when a user attempts to log into Salesforce from an IP address that is outside the login IP range on the User's profile but within the organization-wide trusted IP range?",
+      "options": [
+        "The user will not be able to log in at all",
+        "The user will be able to log in after the computer is activated",
+        "The user will be able to log in without activating the computer",
+        "The user will be able to log in after answering a security question"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "How can a system admin add users to a Salesforce organization using chatter free?",
+      "options": [
+        "Assign chatter-free licenses to users outside the specified user domains",
+        "Assign chatter-free licenses to existing user Salesforce users",
+        "Create users in the organization and assign them a chatter-free license",
+        "Enable invites to allow users to invite others within specified email domains"
+      ],
+      "correct_indices": [
+        2,
+        3
+      ]
+    },
+    {
+      "question_text": "Which statement about chatter posts and comments are true?",
+      "options": [
+        "Updates to the chatter feed on a record are only visible to users with access to the record",
+        "Posts made to a user's profile are visible to all users in the organization",
+        "Posts to a user's profile are hidden from anyone below that user in the role hierarchy",
+        "Posts to a user's profile can be made private by clicking the icon"
+      ],
+      "correct_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "question_text": "Criteria-based sharing rules can be created for which objects?",
+      "options": [
+        "Contacts",
+        "Accounts",
+        "Opportunities",
+        "Campaign Members",
+        "Users"
+      ],
+      "correct_indices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "Where can conditional highlighting be used?",
+      "options": [
+        "Tabular reports",
+        "Enhanced list views",
+        "Matrix reports",
+        "Summary reports"
+      ],
+      "correct_indices": [
+        2,
+        3
+      ]
+    },
+    {
+      "question_text": "The marketing team at Universal Containers uses a web-to-lead form to capture leads from its website and a lead-assignment rule assigns the leads to the appropriate sales representatives. How can a system admin ensure that all leads are handled even when they do not meet the assignment criteria?",
+      "options": [
+        "Specify a default lead owner",
+        "Specify a default lead creator",
+        "Create an escalation rule to route unassigned leads",
+        "Create a validation rule to route unassigned leads"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Universal Container needs to synchronize data between Salesforce and an external financial system. How can a system admin accomplish this?",
+      "options": [
+        "Use an external ID field to match records between the systems",
+        "Use the data loader to match records between the systems",
+        "Use the data loader to upsert Salesforce records into the financial system",
+        "Use the Excel connector to export records from both systems into Excel"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "A system admin at Universal Container needs to mass update the lead source on a number of opportunity records. How can this be accomplished?",
+      "options": [
+        "Export opportunities and update using the import wizard",
+        "Use the similar opportunities to update the opportunities",
+        "Export opportunities and update using the data loader",
+        "Create a list view for opportunities and update using inline editing"
+      ],
+      "correct_indices": [
+        2,
+        3
+      ]
+    },
+    {
+      "question_text": "What does a custom report type determine?",
+      "options": [
+        "The report format of the resulting report",
+        "The field that can be used as columns when building a report",
+        "The custom summary formulas displayed in a resulting report",
+        "The objects that are available when building a report"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "How can a system admin grant users access to dashboards?",
+      "options": [
+        "Designate running users",
+        "Create and share data categories",
+        "Share folders with public groups",
+        "Share folders with roles"
+      ],
+      "correct_indices": [
+        2,
+        3
+      ]
+    },
+    {
+      "question_text": "Sales management at Universal Container needs to display the information below in each account record: amount of all closed-won opportunities, amount of all open opportunities. Which feature should a system admin use to meet this requirement?",
+      "options": [
+        "Roll-up summary fields",
+        "Calculated columns in the related list",
+        "Cross-object formula fields",
+        "Workflow rules with field updates"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "What can be done with a workflow field update action?",
+      "options": [
+        "Change the record type of a record",
+        "Update the value of a formula field",
+        "Update the value of a field on a child object",
+        "Apply a specific value to a field"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "The cloud scheduler has which capability?",
+      "options": [
+        "The cloud scheduler allows users to view available meeting times on lead and contact calendars",
+        "Salesforce can automatically propose multiple meeting times based on Salesforce user calendars",
+        "The cloud scheduler can be enabled at the user profile level",
+        "A custom logo can be added to the meeting request email set to a contact or lead"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "What should a system admin consider when setting up mobile Lite?",
+      "options": [
+        "It must be enabled for the entire organization",
+        "It allows access to most custom objects in the organization",
+        "Only recently-viewed records are synchronized",
+        "It allows access to all standard objects in the organization"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "What type of field allows users to input text, images, and links?",
+      "options": [
+        "Text area",
+        "Input area",
+        "Text area (rich)",
+        "Text and image area"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "A user responsible for managing and creating campaigns is unable to create a new campaign, even though the user's profile has the \"create\" profile permission for campaigns. How should a system admin grant the correct access to the user?",
+      "options": [
+        "Create a campaign sharing rule to grant access to the user",
+        "Grant the user delegated administration rights to campaigns",
+        "Assign the user to the standard marketing user profile",
+        "Select the marketing user checkbox on the user record"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "When converting a lead, how can an admin capture custom lead data on the converted contact?",
+      "options": [
+        "Map custom lead field to the standard lead field",
+        "Use the data loader to move the custom lead data",
+        "Map custom lead field to custom contact fields",
+        "Use the lead conversion wizard to select the fields"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Universal Container has two sales groups, each with its own unique sales process. What is the best way to ensure that sales representatives have access to only the stages relevant to their sales process when working on opportunities?",
+      "options": [
+        "Page layouts",
+        "Multi-select picklists",
+        "Record types",
+        "Roles"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "What tab setting on a profile makes a tab NOT accessible on the All Tabs page or visible in any apps?",
+      "options": [
+        "Read-only",
+        "Default off",
+        "Tab hidden",
+        "Default on"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Which data can be highlighted in a report using conditional highlighting?",
+      "options": [
+        "Data fields",
+        "Summarized totals",
+        "Group by field names",
+        "Summary formulas",
+        "Grand totals"
+      ],
+      "correct_indices": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "question_text": "A user at Universal Container reports an error message when attempting to log in. The admin checks the user's login history, but there is no record of the attempted login. What could be the cause of this issue?",
+      "options": [
+        "The user is attempting to login with the wrong password",
+        "The user is attempting to login outside of the profile ip login range",
+        "The user is attempting to login outside of the profile login hours",
+        "The user is attempting to login with the wrong username"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "What does the controlling field determine when field dependencies are being created?",
+      "options": [
+        "The dependent fields that appear on a layout",
+        "The default value populated in the dependent field",
+        "The values that appear in the dependent field",
+        "The field-level-security for the dependent field"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "How can a sales user relate an opportunity to a campaign?",
+      "options": [
+        "Select the campaign record type when creating the opportunity",
+        "Use the campaign influence related list on the opportunity",
+        "Use the campaign hierarchy related list on the opportunity",
+        "Select the primary campaign source for the opportunity"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "The admin at Universal Containers will create a custom field to track a specific Tier 2 support user on a case record. What data type should be used when creating this custom field?",
+      "options": [
+        "Lookup filter",
+        "Formula",
+        "Hierarchical relationship",
+        "Lookup relationship"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers wants to capture the invoice number and account credit score for billing cases. How would an admin accomplish this?",
+      "options": [
+        "Create a validation rule",
+        "Create custom fields",
+        "Create a support processes C. Create a page layout"
+      ],
+      "correct_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "question_text": "A system admin at Universal Container needs to prevent sales representatives from editing fields on an opportunity once the opportunity has been moved to closed stage. Which data validation tool can be used to accomplish this?",
+      "options": [
+        "Record types and read-only page layouts",
+        "Formula fields",
+        "Data validation rules",
+        "Workflow approvals"
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "What can a marketing user do using the manage button on a campaign record?",
+      "options": [
+        "Create a custom report including all the campaign members",
+        "Import new leads and associate them with the campaign",
+        "Associate existing opportunities with the campaign",
+        "Associate existing contacts with the campaign"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers set the organization-wide default for opportunities to private. Which record will an opportunity pipeline report return?",
+      "options": [
+        "Opportunities for which the user running the report is also the account owner",
+        "Opportunities for the entire sales organization regardless of the user running the report",
+        "Opportunities owned by the user running the report and users below them in the role hierarchy",
+        "Opportunities owned by the user running the report and users in the same role in the role hierarchy"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Which privilege can be granted to members of a content library (workspace) without modifying user permissions?",
+      "options": [
+        "Edit a member's library permissions",
+        "Add tags when editing content details",
+        "Share content with other users in chatter",
+        "Create a new library"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "The sales operations team at Universal Containers needs to be able to read, edit, delete, and transfer all records owned by sales representatives. How can a system admin meet this requirement?",
+      "options": [
+        "Add sales operations users to the default account teams for all sales reps",
+        "Define a role hierarchy where the sales operations role is above the sales reps role",
+        "Create sharing rules that give sales operations access to records owned by sales reps",
+        "Manually share all records owned by sales reps with sales operations"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "What should a system admin consider when deleting a custom field?",
+      "options": [
+        "Fields used in workflow and assignment rules cannot be deleted",
+        "Fields must be removed from page layouts after being deleted",
+        "Field values should be archived before a field is deleted",
+        "Existing field values must be transferred to a new custom field",
+        "Deleted fields and values can be restored from the recycle bin within 15 days"
+      ],
+      "correct_indices": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "question_text": "A marketing user has received a file of leads to import into Salesforce. What tool can be used to avoid duplicate lead records?",
+      "options": [
+        "Import Wizard",
+        "Merge Leads Function",
+        "Data Loader",
+        "Validation Rules"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Universal Containers needs to use cases to manage both customer support issues and internal change requests. Which functionality should a system admin use to meet this requirement?",
+      "options": [
+        "Support process",
+        "Page layouts",
+        "Record types",
+        "Validation rules",
+        "Delegated administration"
+      ],
+      "correct_indices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "Universal Containers requires that its Salesforce account data including attachments be backed up weekly. Which tool should a system admin use to accomplish this?",
+      "options": [
+        "Account analytic snapshot",
+        "Account report export",
+        "Data loader",
+        "Data export service"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "When are validation rules applied when using Salesforce for Outlook?",
+      "options": [
+        "Every time a record is saved",
+        "Every time a user views a record",
+        "Every time a record is updated",
+        "Every time data is synced with the server"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Which component can be included in a custom home page layout?",
+      "options": [
+        "Dashboard components",
+        "Trending chatter topics",
+        "Analytic snapshots",
+        "Messages and alerts",
+        "Pending approval list"
+      ],
+      "correct_indices": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "question_text": "Which statement about Community experts is true?",
+      "options": [
+        "Community experts can delete inappropriate community content",
+        "Community experts are designated by an icon",
+        "Community experts can manage salesforce ideas categories",
+        "Community experts can be designated for salesforce ideas or answers"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "What can users do with Mobile Lite?",
+      "options": [
+        "View/create/edit/delete accounts, contacts, and opportunities",
+        "View campaign and manage campaign members",
+        "View/create/edit/delete custom objects",
+        "Search for records that were not previously downloaded to a mobile device"
+      ],
+      "correct_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "question_text": "Universal Containers needs to allow a group of users to view account records that they do NOT own. Which feature can the system admin use to meet this requirement?",
+      "options": [
+        "Field-level security",
+        "Account record types",
+        "Sharing rules",
+        "Public groups"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "What action is possible with a workflow task?",
+      "options": [
+        "A task can be reused in multiple workflow rules",
+        "A task can be tracked in the activity history",
+        "A single task can be assigned to multiple users",
+        "A task can be assigned to a chatter free user"
+      ],
+      "correct_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "question_text": "What must a system admin consider when setting up the running user for a dashboard?",
+      "options": [
+        "The running user becomes the default owner of the dashboard",
+        "Data access permissions determine what data the users can view in the source reports",
+        "Only users in the same role as the running user can view the dashboard",
+        "The running user determines the data displayed in the components of the dashboard"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "When working on opportunities, sales reps at Universal Containers need to understand how their peers have successfully managed other opportunities with comparable products, competing against the same competitors. Which feature should a system admin use to facilitate them?",
+      "options": [
+        "Big deal alerts",
+        "Chatter groups",
+        "Similar opportunities",
+        "Opportunity update reminders"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "Which field type can be used as an external ID?",
+      "options": [
+        "Text field",
+        "Email field",
+        "Url field",
+        "Number field",
+        "Formula field"
+      ],
+      "correct_indices": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "Which user is listed in the case history related list for case changes made for assignment and escalation rules?",
+      "options": [
+        "The owner of the case when the rule was triggered",
+        "The user who created the assignment or escalation rule",
+        "The system administrator",
+        "The automated case user specified in the support settings"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "A system admin has created a formula field on a lead object to calculate a number. How can the numerical value be mapped to the account record upon lead conversion?",
+      "options": [
+        "The lead formula field value can be mapped to a number field on the account record",
+        "The lead formula field value can be mapped to a roll-up summary on the account record",
+        "The lead formula field value can be mapped to a formula field on the account record",
+        "The lead formula field value can be mapped to a standard field on the account field"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which schedule type can be defined for a product?",
+      "options": [
+        "Revenue",
+        "Production",
+        "Quantity",
+        "Forecast"
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "What task can a delegated admin perform?",
+      "options": [
+        "Manage users within specified roles",
+        "Create new user profiles",
+        "Reset passwords for all users",
+        "Log in as a user who has granted login access",
+        "Manage specified custom objects"
+      ],
+      "correct_indices": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "question_text": "A system admin at Universal Containers created a custom object to capture custom feedback. How can the admin ensure that users have access to this new object?",
+      "options": [
+        "Add fields from the feedback object to the account page layout",
+        "Create a lookup relationship from the account page to the feedback object",
+        "Assign the feedback page layout to the appropriate user profiles",
+        "Create a role in the hierarchy to provide user access to the new object Respuestas examen"
+      ],
+      "correct_indices": [
+        2
+      ]
+    }
+  ]
+}

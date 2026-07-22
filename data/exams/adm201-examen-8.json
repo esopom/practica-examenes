@@ -1,0 +1,749 @@
+{
+  "id": 8,
+  "name": "ADM201 Examen 8",
+  "source_filename": "ADM201 Examen 8.pdf",
+  "questions": [
+    {
+      "question_text": "Universal Containers wants to track Invoice Payments on an Opportunity Related List. Only the Finance Team should see this Related List; however, all Users should be able to view Invoice Payment reports. How should the System Administrator implement this requirement?",
+      "options": [
+        "Set the Invoice Payment Org-Wide Sharing Settings to Private.",
+        "Build an Invoice Payment report with a Running User of Finance.",
+        "Create a new Page Layout and Profile for the Finance Team.",
+        "Only grant Finance access to the Invoice Payment object."
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Which two functions can be customized for the Salesforce Mobile App?",
+      "options": [
+        "Custom objects",
+        "Field permissions",
+        "Object Record Types",
+        "Navigation Menu content",
+        "Object Compact layout"
+      ],
+      "correct_indices": [
+        3,
+        4
+      ]
+    },
+    {
+      "question_text": "What are two Initial Submission Actions in an Approval Process?",
+      "options": [
+        "A task can be assigned to users in a specific Profile.",
+        "The value of a field on the record can be updated.",
+        "The record is locked for everyone except the Owner.",
+        "An outbound message can be sent to another application."
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers wants to create a field to store credit card numbers and needs to make sure the information is protected. Which two actions allow the System Administrator to provide enhanced security for this field?",
+      "options": [
+        "Update Field-Level Security settings.",
+        "Configure different Page Layouts for users.",
+        "Use different Record Types for users.",
+        "Create an Encrypted Text field."
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "What are two benefits of using Data Categories with. Salesforce Knowledge?",
+      "options": [
+        "Articles can be classified into groups.",
+        "Article Owners can track views.",
+        "Articles can be referenced in Chatter posts.",
+        "Article access can be controlled."
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers uses a custom object within the product development team. Product development, executives, and System Administrators. should be the only users with access to records of this object. Product development needs read/write access to all the records within the object, while the executives should only be able to view the records. How can the System Administrator configure the security model to meet these requirements?",
+      "options": [
+        "Set the Organization-Wide Defaults for the custom object to Public Read Write; Give the Product Development Profile Read, Create, Edit permissions; give the Executive Profile Read Only permissions for that object.",
+        "Set the Organization-Wide Defaults for the custom object to Private; give the Product Development Profile Modify All for the object; give the Executive Profile View All access.",
+        "Set the Organization-Wide Defaults for the custom object to Public Read Write; create a Read Only Sharing Rule to share alt records in. the object with the Executive Public Group.",
+        "Set the Organization-Wide Defaults for the custom object to Private; add the Executive users to the default team for the object; add the default team to all the records."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Universal Containers uses a private sharing model for Cases. Each product line has several product specialists who want to have visibility to all Cases involving their product line. How should the System Administrator meet this requirement?",
+      "options": [
+        "Create an owner-based Case Sharing Rule to share corresponding Cases with the product specialist role.",
+        "Create a pre-defined Case Team for each group of product specialists and assign the team using Case Assignment Rules.",
+        "Change the Org-Wide Default for Cases to Controlled By Parent and add product specialists to Account Teams.",
+        "Add the product specialists to the Account Team for each Account that has purchased a product from the product line."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Universal Containers uses a private data access model. Product managers and sales representatives are in different branches of the role hierarchy. What should an Administrator do to ensure that product managers can report on opportunities in their product line?",
+      "options": [
+        "Create a new role for product managers and sales representatives.",
+        "Create a sharing rule based on criteria.",
+        "Move all product managers to a role below the sales representatives.",
+        "Save all opportunity reports in a public folder."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Universal Containers created a Time-Based Workflow rule that sends a follow-up email to the customer two days after a Case is closed. The System Administrator wants to verify that the workflow functions correctly. Which queue should the System Administrator view to monitor pending Workflow Actions?",
+      "options": [
+        "Time-Based Workflow Queue",
+        "Mass Email Queue",
+        "Outbound Messaging Delivery Queue",
+        "Background Jobs Queue"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which two User Interface settings should be used to allow users, with all required profile permissions, to edit records in List Views?",
+      "options": [
+        "Enable Enhanced Profile List Views",
+        "Enable Enhanced Lists",
+        "Enable Inline Editing",
+        "Enable Enhanced Page Layout Editor"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "How should a sales rep create an all-day event in Salesforce?",
+      "options": [
+        "Ensure the event is scheduled for times within the Start and End of Day hours.",
+        "Check the all-day event checkbox on the event.",
+        "Ask the System Administrator to check all-day events in the Activity settings.",
+        "Use a task for an all-day event because then no time fields are needed."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Which two parameters are configured using Locale settings?",
+      "options": [
+        "Business Hours and Holidays",
+        "Time and Number Display format",
+        "First/Last Name and Date format",
+        "Phone Number and Currency format"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "The Universal Containers CEO does not want to see the list of Contacts when viewing an Account page, but still needs to access Contact records. How should a System Administrator configure this?",
+      "options": [
+        "Remove Read access permissions for Contacts from the CEO's Profile.",
+        "Create an Account page layout without the Contacts Related List.",
+        "Set the Contact Org-Wide Default Sharing Settings to Private.",
+        "Remove the Account Related List from the Contact page layout."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "What should a System Administrator do to temporarily prevent a User from logging into Salesforce?",
+      "options": [
+        "Reset the User's password.",
+        "Freeze the User's Account.",
+        "Delete the User's Account.",
+        "Change the User's Login Hours."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "What should a System Administrator do first to troubleshoot login error messages?",
+      "options": [
+        "Log in as the user to view the error message.",
+        "Check the user's login history related list.",
+        "Review entries in the Setup Audit Trail.",
+        "Search the debug log for the error message."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "In which situation is the Case Contact notified when a support representative adds a new case comment?",
+      "options": [
+        "The System Administrator enables Case Comment Notification to Contacts.",
+        "The System Administrator configures the Case Auto-Response Rules.",
+        "The Support Representative uses the Send Email Action on the Case Feed.",
+        "The Support Representative posts the comment to the Case Chatter Feed."
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which two changes are tracked in the Setup Audit Trail?",
+      "options": [
+        "Using the Data Import Wizard",
+        "Creating a List View",
+        "Using the Data Loader",
+        "Resetting a User's password"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "Which report should a System Administrator use to display the number of Contacts related to an Account?",
+      "options": [
+        "Summary report with a Roll-up Summary Account field",
+        "Summary report with a report formula",
+        "Tabular report with a Roll-up Summary Account field",
+        "Tabular report with a report formula"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Universal Containers has a complex sales process with multiple record types, each shared with all Profiles. Some users complain about the Record Type selection screen when creating new Opportunities. Which two actions should the System Administrator take to allow these users to bypass choosing a Record Type?",
+      "options": [
+        "Remove the Record Type field from the users' Page Layout.",
+        "Remove Record Types from the users' Profiles.",
+        "Remove Record Types from the users' Sales Process.",
+        "Instruct users to update the Default Record Type in My Settings."
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers regularly imports Accounts from an external order system that has its own ID field for each record. What should the System Administrator do to help prevent duplicates during these imports?",
+      "options": [
+        "Use VLOOKUP to find matching records in Salesforce.",
+        "Use the ID from the order system in place of the Salesforce ID.",
+        "Create a formula field that identifies matches.",
+        "Create a unique External ID field on Accounts in Salesforce for matching."
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers wants internal support requests to be directed to any of the IT representatives. They want external support requests to be directed to customer support representatives based on the contact's location. What should the System Administrator use to set this up?",
+      "options": [
+        "Assignment Rules and Queues",
+        "Auto-responses Rules and Profiles",
+        "Automated Notifications and Groups",
+        "Territory Management and Teams"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which two features should the System Administrator use to assign ownership of a Lead to the appropriate product team using the custom Lead field Product Interest?",
+      "options": [
+        "Assignment Rules",
+        "Lead Teams",
+        "Escalation Rules",
+        "Queues"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "The marketing team is asked to provide branding and messaging for email templates to be used throughout the customer support process. In which two locations can the System Administrator implement customer-facing email templates with respect to Cases?",
+      "options": [
+        "Owner Assignment Notifications",
+        "Case Auto-response Rules",
+        "Support Rep's Send Email options",
+        "Case Escalation Notifications"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "Which two actions allow the System Administrator to limit Chatter access during roll-out to a subset of Salesforce users?",
+      "options": [
+        "Edit a Profile to “Enable Chatter” for the subset of users.",
+        "Add the subset of users to the company-wide Chatter group.",
+        "Create a Permission Set with the “Enable Chatter” permission for the subset of users.",
+        "Create an email invitation for the subset of users."
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "Universal Containers wants Sales Reps to process credit card payments when an Opportunity is Closed Won. Which approach should the System Administrator use to enable this feature?",
+      "options": [
+        "Build a standard Visualforce page and Salesforce site.",
+        "Add payment detail custom fields to the Opportunity,",
+        "Create a Workflow Rule Email Alert to notify Finance.",
+        "Install an AppExchange credit card payment package."
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "The sales Operations team notices an increase in Opportunities without Products. Which configuration change should the System Administrator make to help Sales Reps remember to add Products to every Opportunity?",
+      "options": [
+        "Set the Org-Wide Defaults for Price Books to Use and Products to Read Only.",
+        "Create a related list to enable the user to view the related products.",
+        "Enable the Opportunity setting to prompt users to add products to opportunities.",
+        "Create a Workflow Rule on the Opportunity object to add a default Product to Opportunities with no Products."
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Which configuration option shows sales representatives the fields they must fill in prior to saving an Opportunity?",
+      "options": [
+        "Dependent Picklist Fields",
+        "Field-level Security",
+        "Page Layout required fields",
+        "Opportunity Validation Rules"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "The customer support team wants to use a different Page Layout when closing a Case. Which method should the System Administrator use to fulfill this request?",
+      "options": [
+        "Case Close Page Layout",
+        "Support Process",
+        "Record Type and Page Layout",
+        "Field-Level Security"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which Salesforce capability allows customers to vote on new product features?",
+      "options": [
+        "Ideas",
+        "Knowledge",
+        "Articles",
+        "Answers"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Customers complain that they do not know when. Comments have been added to their Cases. Which configuration can a System Administrator implement to address this concern?",
+      "options": [
+        "Enable Case Comment Notification to Contacts.",
+        "Configure Feed Tracking for Case Comments.",
+        "Configure the Case Auto-Response Rules.",
+        "Create a Workflow Rule Email Alert on Case Comments."
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which feature tracks how often a file is viewed?",
+      "options": [
+        "Content Deliveries",
+        "Email Attachments",
+        "Chatter Files",
+        "Document Reports"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Universal Containers has a team of Account Managers that requested email alerts any time an Opportunity or Case is created on Accounts. that they own. What is the minimum number of workflows needed to accomplish this task?",
+      "options": [
+        "Four workflow rules for create and update on Opportunities and Accounts",
+        "Two workflow rules with one email alert each",
+        "One workflow rule with two email alerts",
+        "No workflow rules, but two email alerts"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "When a user account is deactivated, what happens to the associated license?",
+      "options": [
+        "The license is removed from the billable licenses for the organization.",
+        "The license is automatically assigned to another user.",
+        "The license becomes available for reassignment.",
+        "The license is listed as Inactive."
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Universal Containers has an Auto-response rule to send emails when a customer submits a new Case and an Assignment rule to determine case ownership for new Cases. In addition, the Case object has validation rules to ensure that each Case includes values for all fields needed by its owner to resolve the Case. Workflow Rules and Escalation Rules ensure that a support manager is properly notified when a Case remains unresolved for too long. In what order does Salesforce process the immediate actions associated with Workflow Rules and related business automations for a newly created record?",
+      "options": [
+        "Validation rules, Escalation rules, Assignment rules, Auto-response rules, Workflow rules",
+        "Workflow rules, Validation rules, Assignment rules, Escalation rules, Auto- response rules",
+        "Validation rules, Assignment rules, Auto-response rules, Workflow rules, Escalation rules",
+        "Escalation rules, Validation rules, Workflow rules, Auto-response rules, Assignment rules"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "What is a benefit of using a Lookup Filter instead of a Validation Rule?",
+      "options": [
+        "Faster page refresh on the Salesforce Mobile App",
+        "Improves user efficiency when selecting a related record",
+        "Adds the ability to edit multiple records from list views",
+        "Better error messages when an incorrect record is selected"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Universal Containers uses a hybrid sharing model where Accounts and Contacts are Read Only and Opportunities and Cases are Private. Account Executives (AE) own all the Accounts. Some Contacts are owned by AEs, and other Contacts are owned by support reps. How should the System Administrator ensure the AEs can edit all the Contacts associated with their Accounts, no matter who owns the Contact?",
+      "options": [
+        "Select the edit all associated contacts option for the AE Role in the Role Hierarchy.",
+        "Create a read/write Sharing Rule to share all related Contacts with the Account owner.",
+        "Account owner privileges give the AE edit access to all related records by default.",
+        "Use the Mass Transfer Tool to transfer ownership of all Contacts to the AES."
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which configuration action should be performed to ensure every Case gets assigned to a valid Owner?",
+      "options": [
+        "Create a Validation Rule based on the Created By field.",
+        "Define the Default Case Owner in Support Settings.",
+        "Configure a default value for the Case Owner field.",
+        "Create a Workflow Rule that checks for a blank Owner field."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "At Universal Containers, the sales managers would like Opportunities that have NOT been updated in the past 30 days to automatically be flagged. How should a System Administrator implement this requirement?",
+      "options": [
+        "Add a formula to the default value of the Opportunity name field to turn the background red if the record meets the criteria.",
+        "Create a formula field to calculate the time since last update and display an image of a red flag if it meets the defined criteria.",
+        "Create a formula field to show the Last Login date of the Owner and display an alert message if it meets the defined criteria.",
+        "Add a formula to the default value of the Last Modified Date field to turn the text red if the record meets the criteria."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "How can multiple Campaign records be associated with a single Opportunity?",
+      "options": [
+        "Primary Campaign Source",
+        "Campaign Members",
+        "Campaign Influence",
+        "Campaign Hierarchy"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Which two standard objects are related to Account records?",
+      "options": [
+        "Opportunities",
+        "Campaigns",
+        "Cases",
+        "Leads"
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "Support Representatives at Universal Containers want the same Technical Engineer group to be associated with each new Case. What should a System Administrator define to implement this requirement?",
+      "options": [
+        "Case Assignment Rule to associate the Case Team",
+        "Workflow Rule to add the Case Team",
+        "Default Case Team on each User's record",
+        "Default Case Team on each Account record"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "How should a System Administrator ensure that a Picklist field's values display in consistent colors on all reports?",
+      "options": [
+        "Configure Report Conditional Highlighting for each value.",
+        "Create a Formula field that defines the color for each value.",
+        "Update the Picklist field and set the color for each value.",
+        "Use a Bucket field that defines the color for each value."
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "What is the maximum number of components that can be added to a single Dashboard?",
+      "options": [
+        "15",
+        "50",
+        "3",
+        "20"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers created a new custom object to track Inventory items. The Support Team cannot see the Inventory object's tab. Which two settings should the System Administrator check to find the cause of the problem?",
+      "options": [
+        "Support Team Profiles",
+        "Inventory object Page Layouts",
+        "Inventory object Sharing Settings",
+        "Support Team Permission Sets"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "A system Administrator will use the Import Wizard to update existing Account records. Which values can the Import Wizard use to find matching records?",
+      "options": [
+        "Address field",
+        "Parent Account field",
+        "Account Name and Site fields",
+        "Created By field"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Which option can be added to Outlook Publisher Layouts?",
+      "options": [
+        "Custom Buttons",
+        "Related Lists",
+        "Custom Fields",
+        "Quick Actions"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "How can a System Administrator discover who added a field to the account page layout?",
+      "options": [
+        "Run an Account History report.",
+        "Review the Account Last Modified By field.",
+        "Download the Setup Audit Trail.",
+        "Create a poll in the Admin Chatter group."
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Universal Containers sells through many different reseller networks. Each reseller's deals are tracked on separate opportunities. The sales manager is concerned that the pipeline report is not accurate due to multiple opportunities for the same end customer. How should the sales process be modified to ensure opportunities are not double counted in the pipeline?",
+      "options": [
+        "Change the forecast category to Omitted on the duplicate opportunities.",
+        "Create one opportunity and use the competitors related list to track the different resellers.",
+        "Enable duplicate management to prevent the creation of the duplicate opportunities.",
+        "Change the amount on the duplicate opportunities to zero."
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which three report charts show how many Leads are in the Marketing pipeline based on Lead Status and what percent each Lead Status. represents?",
+      "options": [
+        "donut chart",
+        "bar chart",
+        "funnel chart",
+        "line chart",
+        "pie chart"
+      ],
+      "correct_indices": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "question_text": "Universal Containers wants to create a Workflow Rule to send an email alert to members of its Board of Directors, none of whom use. salesforce. How many of the board members can be added to a single. Email Alert?",
+      "options": [
+        "Up to 5 additional email addresses can be added to the Email Alert.",
+        "Up to 250 additional email addresses can be added to the Email Alert.",
+        "Up to 25 additional email addresses can be added to the Emall Alert.",
+        "It is not possible to add additional email addresses to the Email Alert."
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "What should the System Administrator check when users are unable to find a Custom Report Type?",
+      "options": [
+        "Add a button for the new Report Type to the Report Builder.",
+        "Make sure the user Profile includes the Report Type.",
+        "Make sure the new Report Type is deployed.",
+        "Add the new Report Type to the related objects."
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Universal Containers has three Account record types: Prospect, Customer, and Vendor. The Customer record type is only for Accounts that have a Closed Won Opportunity. How should a System Administrator prevent users from selecting the Customer Record Type when they create new Account records?",
+      "options": [
+        "Remove the Customer Record Type as an Assigned Record Type in the users' Profiles and Permission Sets.",
+        "Create an Account Validation Rule that prevents new Accounts with the Customer Record Type from being saved.",
+        "Create a Workflow Rule or Process to change the Record Type from Customer to Prospect.",
+        "Create an Account Auto-Assignment Rule to assign the Prospect Record Type to all new Accounts."
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which three reports can be used to display a list of the Top 10 Accounts on a dashboard?",
+      "options": [
+        "summary report without a chart",
+        "summary report with a chart",
+        "tabular report with Rows to Display set to 10",
+        "summary report with Rows to Display set to 10",
+        "tabular report with a chart"
+      ],
+      "correct_indices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "What standard object stores information about sales deals?",
+      "options": [
+        "Products",
+        "Accounts",
+        "Assets",
+        "Opportunities"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Which two objects can be related to Campaign Members?",
+      "options": [
+        "Contact Roles",
+        "Contacts",
+        "Partners",
+        "Leads"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "How should the System Administrator implement biweekly notifications for Sales Reps that include Opportunities that need attention based on the Opportunity Owner's last login, past due Opportunities, and all Opportunities that have not been updated in the last 30 days?",
+      "options": [
+        "Create Scheduled Reports.",
+        "Create a Chatter Group.",
+        "Create Scheduled Dashboards.",
+        "Create Opportunity Update Reminders."
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which two best practices are recommended prior to mass-deleting records?",
+      "options": [
+        "Run and export a report to archive data before deletion.",
+        "Create a new list view for all records that need to be deleted.",
+        "Download a Setup Audit Trail for the last six months before deletion.",
+        "Schedule a weekly data export and download the backup zip files."
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers has an inside sales team that only sells warranty renewals and an outside sales team that only sells products. Each type of sale captures different information and has a different sales cycle. How should the System Administrator configure Salesforce to meet these requirements?",
+      "options": [
+        "Create a custom Object for warranty renewals with the appropriate Sales Process.",
+        "Create a Validation Rule that displays the correct Page Layout and Sales Process based on Role.",
+        "Create a custom picklist field on the Opportunity to specify if it is a product or warranty sale.",
+        "Create a Page Layout, Sales Process, and Record Type for each type of sale."
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers has inconsistent data in its 20,000 existing Accounts and asked the System Administrator to convert all of the standard country fields to ISO codes. What method should the System Administrator use?",
+      "options": [
+        "List View Inline Editing",
+        "Report Exports",
+        "Data.com Clean",
+        "Mass Update Addresses"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "A System Administrator cannot share a report folder. What is a possible reason?",
+      "options": [
+        "Folder Sharing is not enabled for the Org.",
+        "The reports in the folder only reference custom objects.",
+        "The reports in the folder are already shared with other users.",
+        "The folder is private. ANSWERS"
+      ],
+      "correct_indices": [
+        3
+      ]
+    }
+  ]
+}

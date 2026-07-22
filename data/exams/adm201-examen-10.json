@@ -1,0 +1,783 @@
+{
+  "id": 10,
+  "name": "ADM201 Examen 10",
+  "source_filename": "ADM201 Examen 10.pdf",
+  "questions": [
+    {
+      "question_text": "The administrator at Cloud Kicks updates the custom object Event to include a lookup field to the primary contact for the event. When running an event report, they want to reference fields from the associated contact record. What should the administrator do to pull contact fields into the custom report?",
+      "options": [
+        "Create a new report type with Event as the primary object and Contact as a related object and Contact as a related object",
+        "Configure formula fields on Event to populate contact information",
+        "Use a dashboard with filters to show Event and contact data as requested",
+        "Edit the custom Event report type and add fields related via lookup"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "What should an administrator use as an identifier when importing and updating records from a separate financial system?",
+      "options": [
+        "Record ID",
+        "Auto-Number field",
+        "Rich Text field",
+        "External ID"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks wants to try out an app from the AppExchange to ensure that the app meets its needs. Which two options should the administrator suggest?",
+      "options": [
+        "Test Drive in a production org",
+        "Install in a sandbox",
+        "Download into a Trailhead Playground",
+        "Check edition compatibility"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "Users at DreamHouse Realty are only allowed to see opportunities they own. Leadership wants an enterprise-wide dashboard of all open opportunities in the pipeline so that users can see how the company is performing at any point in time. How should an administrator create the dashboard without changing any sharing settings?",
+      "options": [
+        "Update the dashboard folder settings to manager for the sales reps role",
+        "Create a dashboard with the running user set as someone who can see all opportunities",
+        "Add a filter to the dashboard to filter the opportunities by owner role",
+        "Build individual dashboards for profiles that need to see the enterprise results"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "The administrator at Ursa Major has created a new record type for customer warranty Cases. Which two assignments should the administrator use to display the new record type to users?",
+      "options": [
+        "Profile Assignment",
+        "Page Layout Assignment",
+        "App Manager Assignment",
+        "Role Assignment"
+      ],
+      "correct_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "question_text": "An administrator needs to store the ID of a record type for later use in a flow. Which kind of variable should the administrator use?",
+      "options": [
+        "Text variable",
+        "ID variable",
+        "Record variable",
+        "Boolean variable"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Ursa Major Solar has a path on Case. The company wants to require its users to follow the status values as they are on the path. Agents should be prohibited from reverting the Case back to a previous status. Which feature should an administrator use to fulfill this request?",
+      "options": [
+        "Validation Rules",
+        "Global Value Picklists",
+        "Dependent Picklists",
+        "Predefined Field Values"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "An administrator at Ursa Major Solar needs to send information to an external accounting system whenever an opportunity closes. What workflow action should the administrator use to accomplish this?",
+      "options": [
+        "Create a Record",
+        "Custom Notification",
+        "Assign Task",
+        "Outbound Message"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Northern Trail Outfitters wants to know the average stage duration for all closed opportunities. How should an administrator support this request?",
+      "options": [
+        "Refresh weekly reporting shapshots for Closed Opportunities",
+        "Run the Opportunity Stage Duration report",
+        "Use Process Builder to capture the daily average on each Opportunity",
+        "Add formula fields to track Stages on each Opportunity"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "The administrator at Ursa Major Solar needs to make sure that unassigned cases from VIP customers get transferred to the appropriate service representative within 5 hours. VIP customers have access to support 24 hours a day. How should this configured?",
+      "options": [
+        "Assignment Rules",
+        "Business hours",
+        "Escalation Rules",
+        "Case Queues"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "The marketing team at Ursa Major Solar wants to send a personalized email whenever a lead fills out the web-to-lead form on their website. They want to send different messages based on the Lead Industry field value. What should an administrator configure to meet this requirement?",
+      "options": [
+        "Configure an auto-response rule to email the lead",
+        "Use a validation rule to trigger workflow to email the lead",
+        "Add a public group and Process Builder to email the lead",
+        "Create an assignment rule to email the lead"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "DreamHouse Realty has an approval process. A manager attempts to approve the record but receives an error. What should the administrator review to troubleshoot this request?",
+      "options": [
+        "Review the page layout to ensure the fields updated in the process are visible",
+        "Add a delegated approver for the next approver in the process",
+        "Check if the user in the next approver is inactive or missing",
+        "Update the field-level security to view on fields that are updated in the process"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "The administrator at Ursa Major Solar has been asked to change the Work Item and Project custom object relationship from a master-detail to a lookup. Which scenario could prevent the administrator from fulfilling this requirement?",
+      "options": [
+        "The lookup field is required for saving records",
+        "The lookup field in all the records contains a value",
+        "A junction object is required to support the lookup",
+        "Roll-up summary fields exist on the master object"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers (UC) would like to count the number of open cases associated with each Account and update the Account with this value every Friday evening. UC has several hundred open cases at any given time. What should the administrator use to complete this request?",
+      "options": [
+        "Use a scheduled flow",
+        "Use a scheduled Process Builder",
+        "Use a Roll-Up Summary field on Case",
+        "Use a record triggered flow"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Ursa Major Solar wants to know which of its marketing efforts are helping the team win opportunities. What should an administrator configure to provide these insights?",
+      "options": [
+        "List Email Activities",
+        "Campaign Influence",
+        "Campaign Hierarchy",
+        "Map Custom Lead Fields"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "An administrator at DreamHouse Realty needs to create customized pages for the Salesforce mobile app. Which two types of pages could an administrator build and customize using the Lightning App Builder?",
+      "options": [
+        "App page",
+        "User page",
+        "Dashboard page",
+        "Record page"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "The marketing director at Northern Trail Outfitters has requested that the Budget field is populated in order for the Lead Status field to be marked as qualified. What tool should the administrator use to fulfill this request?",
+      "options": [
+        "Lead Conversion",
+        "Require Field",
+        "Validation Rule",
+        "Workflow Rule"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "The administrator at Cloud Kicks created a new field for tracking returns on their new cloud shoe. A user has submitted a case to the administrator indicating that the new field is unavailable. Which two steps should an administrator do to troubleshoot this issue?",
+      "options": [
+        "Ensure that the page layout for the user’s profile has been updated",
+        "Run the setup audit trail for the organization",
+        "Review the field-level security of the field for the user profile",
+        "Update the organization-wide defaults for the object"
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks has asked the administrator to test a new screen flow that creates contacts. What are two key components of testing the flow?",
+      "options": [
+        "Test the flow in a sandbox",
+        "Use Debug to test the flow in Flow Builder",
+        "Run the flow using it to create contacts",
+        "Set up a flow interview to test the flow"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "An administrator creates a custom text area field on the Account object and adds it to the service team’s page layout. The service team manager loves the addition of this field and wants it to appear in the highlights panel so that the service reps can quickly find it when on the Account page. How should the administrator accomplish this?",
+      "options": [
+        "Make the field required and move it to the top of the page",
+        "Create a new page layout and a new section titled highlights panel",
+        "From the page layout editor, drag the field to the highlights panel",
+        "In the Account object manager, create a custom compact layout"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Which item is available in a Lightning App where visibility is limited to the Salesforce mobile app?",
+      "options": [
+        "Utility Bar",
+        "Favorites",
+        "Today",
+        "Home Page"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks wants to give credit to Opportunity team members based on the level of effort contributed by each person toward each deal. What feature should the administrator use to meet this requirement?",
+      "options": [
+        "Splits",
+        "Stages",
+        "List Views",
+        "Queues"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Which three aspects of standard fields should an administrator customize?",
+      "options": [
+        "Field name",
+        "Picklist values",
+        "Field history tracking",
+        "Decimal places",
+        "Help text"
+      ],
+      "correct_indices": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "question_text": "Universal Containers has two sales teams, sales team A and sales team B. Each team has their own role in the role hierarchy. Both roles are subordinates of the same Manager role. How should the administrator share records owned by sales team A with sales team B?",
+      "options": [
+        "Hierarchical sharing",
+        "Owner-based sharing",
+        "Criteria-based sharing",
+        "Use manual sharing"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "The administrator at AW Computing wants Account details, related lists, and Chatter feeds to each appear on separate tabs when viewing an Account. Which type of page should the administrator create?",
+      "options": [
+        "Lightning app page",
+        "Lightning page component",
+        "Lightning record page",
+        "Lightning page tab"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Northern Trail Outfitters has the Case object set to private. The support manager raised a concern that reps have a broader view of data than expected and can see all cases on their group’s dashboards. What could be causing reps to have inappropriate access to data on dashboards?",
+      "options": [
+        "Public Dashboards",
+        "Dashboard Subscriptions",
+        "Dynamic dashboards",
+        "Dashboard Filters"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks wants its reports to show a Fiscal Year that starts on February 1 and has 12 months. How should the administrator address this requirement?",
+      "options": [
+        "Set the Fiscal Year to Standard and the duration to 12 months",
+        "Set the Fiscal Year to Custom and the starting month as February",
+        "Set the Fiscal year to Standard and the starting month as February",
+        "Set the Fiscal Year to Custom and the duration to 4 quarters"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Northern Trail Outfitters wants emails received from customers to generate cases automatically. How should the administrator ensure that the emails are sent to the correct queue?",
+      "options": [
+        "Utilize a flow to identify the correct queue and assign the case",
+        "Create an Escalation Rule to send cases to the correct queue",
+        "Use a custom email service to set the owner of the case upon creation",
+        "Configure Email-to-Case so emails are delivered to the correct queue"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "DreamHouse Realty wants to offer a form on its Experience Cloud site where inspectors will submit findings from a property inspection. Which feature should an administrator place on the page to fulfill this requirement?",
+      "options": [
+        "Related List",
+        "Screen Flow",
+        "Autolaunched Flow",
+        "Record detail"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "A team of support users at Cloud Kicks is helping inside sales reps make follow-up calls to prospects that filled out an interest form online. THe team currently does not have access to the Lead object. How should an administrator provide proper access?",
+      "options": [
+        "Configure permission sets",
+        "Create a new profile",
+        "Set up Manual sharing",
+        "Assign a new role"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "The VP of sales at Cloud Kicks is receiving an error message that prevents them from saving an opportunity. The administrator attempted the same edit without receiving an error. How can the administrator validate the error the user is receiving?",
+      "options": [
+        "View the setup audit trail",
+        "Edit the page layout",
+        "Log in as the user",
+        "Review the sharing model"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "AW Computing needs to capture a loss reason in a rich text field when an opportunity is closed lost. How should an administrator configure this requirement?",
+      "options": [
+        "Create a validation rule to display an error if stage is closed and Loss Reason is blank",
+        "Check the required checkbox on the Loss Reason field in Object Manager",
+        "Select the required checkbox next to the Loss Reason field on the page layout",
+        "Configure a workflow rule to display an error if Loss Reason is blank"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Users at Cloud Kicks want to be able to create a task that will repeat every two weeks What should an administrator do to meet this requirement?",
+      "options": [
+        "Turn on Recurring Activities",
+        "Workflow rule to create recurring tasks",
+        "Enable Creation of Recurring Tasks",
+        "Flow to create recurring tasks"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks (CK) has a new administrator who is asked to put together a memo detailing Salesforce usage to budget for upcoming license purchases. Where should the administrator go to find out what type of licenses CK has purchased and how many are available?",
+      "options": [
+        "User licenses related list in company information",
+        "Usage-based entitlements related list in company information",
+        "User management settings in setup",
+        "Search for licenses types in setup"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "When a Cloud Kicks opportunity closes, the company would like to automatically create a renewal opportunity. Which two automation tools should an administrator use to accomplish this request?",
+      "options": [
+        "Workflow rule",
+        "Flow Builder",
+        "Process Builder",
+        "Approval Process"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "The sales manager at Cloud Kicks approves time off for their employees. They asked the administrator to ensure these requests are seen and responded to by a backup manager while the sales manager is out on vacation. What should the administrator use to fulfill the requirement?",
+      "options": [
+        "Delegated Approver",
+        "Approval History Related List",
+        "Delegated Administrator",
+        "Two-Step Approval Process"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks has created a screen flow for their sales team to use when they add new Leads. The screen flow collects name, email, and shoe preference. Which two things should the administrator do to display the screen flow?",
+      "options": [
+        "Use a flow element and add the screen flow to the record page",
+        "Install an app from the AppExchange",
+        "Add the flow in the utility bar of the console",
+        "Create a tab and add the screen flow to the page"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "Which tool should an administrator use to review recent configuration changes made in their org?",
+      "options": [
+        "Debug Logs",
+        "Field History Tracking",
+        "Setup Audit Trail",
+        "Critical Updates"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Universal Containers wants to increase the security of their org by requiring stricter user passwords. Which two of the following should an administrator configure?",
+      "options": [
+        "Password different than username",
+        "Password complexity requirement",
+        "Minimum password length",
+        "Revent common words"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks has a customer success agent going on leave and needs to change ownership on multiple cases. Which two users are able to fulfill this request?",
+      "options": [
+        "A user with a manager role above the agent",
+        "A user with the Manage Cases permission",
+        "A user with the System Administrator profile",
+        "A user Read permission on the account"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "The business development at Cloud Kicks thinks the Account creation process has too many fields to fill out and the page feels cluttered. They have requested the administrator to simplify the process. Which automation tool should an administrator use?",
+      "options": [
+        "Approval Process",
+        "Validation Rule",
+        "Workflow Rule",
+        "Flow Builder"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers (UC) customers have provided feedback that their support cases are not being responded to quickly enough. UC wants to send all unassigned Vases that have been open for more than 2 hours to an urgent Case queue and alert the support manager. Which feature should an administrator configure to meet this requirement?",
+      "options": [
+        "Case Assignment Rules",
+        "Case Scheduled Reports",
+        "Case Escalation Rules",
+        "Case Dashboard Refreshes"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Sales reps miss key fields when filling out an opportunity record through the sales process. Reps need to move forward in stages but are unable to enter a previous stage. Which three options should the administrator use to address this need?",
+      "options": [
+        "Use Flow to mark fields required",
+        "Use validation rules",
+        "Enable guided selling",
+        "Mark fields required on the page layout",
+        "Configure Opportunity Path"
+      ],
+      "correct_indices": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "question_text": "The support manager at Cloud Kicks wants to respond to customers as quickly as possible. They have requested that the response include the top five troubleshooting tips that could help solve the customer’s issue. What should the administrator suggest to meet these requirements?",
+      "options": [
+        "Knowledge Articles",
+        "Assignment Rules",
+        "Auto-Response Rules",
+        "Email Alerts"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Ursa Major Solar uses two different page layouts for Account records. One page layout reflects the fields related to customer accounts and another page layout includes fields for partner accounts. The administrator has assigned the customer account page layout to sales and support users and the partner account layout to the partner management team. What should the administrator configure to meet this requirement?",
+      "options": [
+        "Use a public group and a criteria-based sharing rule to share customer accounts with the partner team?",
+        "Grant create, read, edit, and delete access to customer accounts on the partner team profile",
+        "Add members of the partner management team to the default Account team for the customer accounts",
+        "Create one record type for customer accounts and one record type for partner accounts"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks users are seeing error messages when they use one of their screen flows. The error messages are confusing but could be resolved if the users entered more information on the account before starting the flow. How should the administrator address this issue?",
+      "options": [
+        "Create a permission set to allow users to bypass the error",
+        "Use a fault connector and display a screen with text explaining what went wrong and how to correct it",
+        "Uncheck the End User Flow Errors box in Setup",
+        "Remove validation rules so that the users are able to proceed without complete records"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "An administrator is on a tight deadline to create dashboards for the sales and marketing teams at AW Computing. What should the administrator do to meet the deadline without increasing the budget?",
+      "options": [
+        "Build the dashboards manually to meet the deadline",
+        "Train someone on the sales and marketing teams to build dashboards",
+        "Check the AppExchange for a prebuilt solution that can be easily customized",
+        "Hire a consultant to build the custom dashboards"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "An administrator at Cloud Kicks wants to deactivate a user who has left the company. What are two reasons that would prevent a user from being deactivated?",
+      "options": [
+        "The user is in a custom hierarchy field",
+        "The user is assigned in a workflow email alert",
+        "The user is part of a territory hierarchy",
+        "The user is the highest role in the role hierarchy"
+      ],
+      "correct_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "question_text": "DreamHouse Realty just announced its new Home Concierge offering. This product is unlike anything the company has offered in the past and follows a different business model. What should the administrator configure to meet this requirement?",
+      "options": [
+        "Create a new sales process",
+        "Create a new Opportunity product",
+        "Create a new approval process",
+        "Create a quick action"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "A new sales rep at Ursa Major Solar has a qualified lead that is ready for conversion When using the Lead conversion process, which two records can be created?",
+      "options": [
+        "Case",
+        "Contact",
+        "Campaign",
+        "Account"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "Ursa Major Solar offers amazing experiences for all of its employees. The employee engagement committee wants to post updates while restricting other employees from posting. What should the administrator create to meet this request?",
+      "options": [
+        "Chatter Broadcast Group",
+        "Chatter Recommendations",
+        "Chatter Unlisted Group",
+        "Chatter Stream"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Northern trail Outfitters has a new flow that automatically sets field values when a new account is created. The flow is launched by a process, but the flow is not working properly. What should the administrator do to identify the problem?",
+      "options": [
+        "Set up email logs and review the send error logs",
+        "Review debug logs with the flow logging level",
+        "View the setup audit trail and review for errors",
+        "Use the native debug feature in the Flow Builder"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers (UC) has a queue that is used for managing tasks that need to be worked by the UC customer support team. The same team will now be working some of UC’s Cases. Which two options should the administrator use to help the support team?",
+      "options": [
+        "Add Cases to the existing queue as available object",
+        "Use assignment rules to set the queue as the owner of the case",
+        "Configure a flow to assign the cases to the queue",
+        "Create a new queue and add Cases as an available object"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "Sales reps at Cloud Kicks want to be notified when they have a high likelihood of winning an opportunity over $1,000,000. Which feature meets this requirement?",
+      "options": [
+        "Performance Chart",
+        "Key Deals",
+        "Activity Timeline",
+        "Big Deal Alerts"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Users at Cloud Kicks want to see information more useful for their role on the Case page. How should an administrator make the pages more dynamic and easier to use?",
+      "options": [
+        "Add component visibility filters to the components",
+        "Delete the extra components from the page",
+        "Remove fields from the record details component",
+        "Include more tab components with filters"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Sales users at Cloud Kicks are requesting that the data in the Industry field on the Account object displays on the Opportunity page layout. Which type of field should an administrator create to accomplish this?",
+      "options": [
+        "Cross-object formula field",
+        "Master-detail relationship field",
+        "Standard Account field",
+        "Custom Account field"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks has a custom object named Shoe. The administrator has been asked to ensure that when a relationship is created between Account and Shoe to prevent orphaned shoe records. What should the administrator do to complete this requirement?",
+      "options": [
+        "Create an indirect lookup",
+        "Create an encrypted lookup",
+        "Create a master-detail lookup",
+        "Create a hierarchical lookup"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "An administrator has been asked to change the data type of an auto number to a text field What should the administrator be aware of before changing the field?",
+      "options": [
+        "Existing Auto Number field to Text is prevented",
+        "Existing field values will be deleted",
+        "Existing field values will remain unchanged",
+        "Existing field values will be converted"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks wants to track shoe designs by products. Shoe designs should be unable to be deleted, and there can be multiple designs for one product across various stages. Which two steps should the administrator configure to meet this requirement?",
+      "options": [
+        "Create a custom object for shoe design",
+        "Configure a custom lookup field for shoe designs on the Product object",
+        "Add a custom master-detail field for shoe designs on the Product object",
+        "Use the standard object for designs"
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "An administrator at Universal Containers is reviewing current security settings in the company’s Salesforce org. What should the administrator do to prevent unauthorized access to Salesforce?",
+      "options": [
+        "Disable TLS requirements for sessions",
+        "Enable caching and autocomplete on login page",
+        "Enable multi-factor authentication",
+        "Customize organization-wide defaults"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "An administrator wants to trigger a follow-up task for the opportunity owner when they close an opportunity as won, and another task after 60 days to check in with the customer. Which two automation tolls should the administrator use?",
+      "options": [
+        "Outbound Message",
+        "Workflow Rule",
+        "Process Builder",
+        "Field Update"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "An administrator at Cloud Kicks needs to export a file of closed won opportunities from the last 90 days. The file should include the Opportunity Name, ID, Closed Date, and Amount. How should the administrator export this file?",
+      "options": [
+        "Data Export Wizard",
+        "Data Loader",
+        "Data Import Wizard",
+        "Data Export Service"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks want to have consistency when communicating with customers on cases. The company has requested messages to be sent in an email channel with categories to help search for the proper message. Which solution should an administrator suggest to meet this requirement?",
+      "options": [
+        "Prebuilt Quick Texts",
+        "Prebuilt Flow Templates",
+        "Prebuilt Email Templates",
+        "Prebuilt Auto-Responses ANSWERS"
+      ],
+      "correct_indices": [
+        2
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# Dependencias (solo hacen falta para importar PDFs, no para la web publicada)
+node_modules/
+
+# Restos de la versión antigua con servidor y base de datos
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

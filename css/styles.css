@@ -128,6 +128,11 @@ h1 { font-size: 1.125rem; margin: 0; font-weight: 700; line-height: 1.4; }
 
 .hint { color: var(--text-muted); font-size: 0.875rem; margin: 12px 2px 0; }
 
+/* Aviso de cuántas respuestas faltan en las preguntas de selección múltiple.
+   Se resalta en naranja mientras la selección esté incompleta. */
+.q-select-hint { font-weight: 600; }
+.q-select-hint.incomplete { color: var(--warning); }
+
 .view.hidden { display: none; }
 .hidden { display: none !important; }
 

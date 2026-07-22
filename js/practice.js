@@ -165,13 +165,52 @@ const Practice = (() => {
       qText.textContent = q.question_text;
       card.appendChild(qText);
 
+      // Aviso de selección en preguntas de varias respuestas: dice cuántas
+      // faltan (o sobran) y se actualiza a cada clic.
+      let hintEl = null;
       if (q.multi_select) {
-        const hint = document.createElement('div');
-        hint.className = 'hint';
-        hint.style.marginTop = '-10px';
-        hint.style.marginBottom = '10px';
-        hint.textContent = `Elige ${q.correct_count} opciones.`;
-        card.appendChild(hint);
+        hintEl = document.createElement('div');
+        hintEl.className = 'hint q-select-hint';
+        hintEl.style.marginTop = '-10px';
+        hintEl.style.marginBottom = '10px';
+        card.appendChild(hintEl);
+      }
+
+      // Se crea más abajo, en el pie de la tarjeta.
+      let confirmBtn = null;
+
+      // Mantiene sincronizados el aviso y el botón de confirmar. Solo se puede
+      // confirmar cuando hay marcadas EXACTAMENTE las respuestas que se piden.
+      function updateSelectionUi() {
+        const marcadas = st.selected.size;
+        const piden = q.correct_count;
+
+        if (hintEl) {
+          if (st.confirmed) {
+            hintEl.textContent = `Esta pregunta pedía ${piden} respuestas.`;
+            hintEl.classList.remove('incomplete');
+          } else if (marcadas === piden) {
+            hintEl.textContent = `Has marcado las ${piden} respuestas: ya puedes confirmar.`;
+            hintEl.classList.remove('incomplete');
+          } else if (marcadas < piden) {
+            const faltan = piden - marcadas;
+            hintEl.textContent =
+              `Esta pregunta pide ${piden} respuestas. Te ${faltan === 1 ? 'falta 1' : `faltan ${faltan}`} por marcar.`;
+            hintEl.classList.add('incomplete');
+          } else {
+            hintEl.textContent =
+              `Esta pregunta pide solo ${piden} respuestas. Has marcado ${marcadas}: quita ${marcadas - piden}.`;
+            hintEl.classList.add('incomplete');
+          }
+        }
+
+        if (confirmBtn) {
+          const incompleta = marcadas !== piden;
+          confirmBtn.disabled = incompleta;
+          confirmBtn.title = incompleta
+            ? `Marca exactamente ${piden} ${piden === 1 ? 'respuesta' : 'respuestas'} para poder confirmar.`
+            : '';
+        }
       }
 
       const optsWrap = document.createElement('div');
@@ -210,7 +249,7 @@ const Practice = (() => {
               optsWrap.querySelectorAll('.q-option-btn').forEach((b) => b.classList.remove('selected'));
               btn.classList.add('selected');
             }
-            if (confirmBtn) confirmBtn.disabled = st.selected.size === 0;
+            updateSelectionUi();
           });
         }
 
@@ -248,13 +287,16 @@ const Practice = (() => {
       });
       navWrap.appendChild(prevBtn);
 
-      let confirmBtn = null;
       if (!st.confirmed) {
         confirmBtn = document.createElement('button');
         confirmBtn.className = 'primary-btn';
         confirmBtn.textContent = 'Confirmar respuesta';
-        confirmBtn.disabled = st.selected.size === 0;
         confirmBtn.addEventListener('click', () => {
+          // Red de seguridad: nunca se confirma una respuesta incompleta.
+          if (st.selected.size !== q.correct_count) {
+            updateSelectionUi();
+            return;
+          }
           confirmBtn.disabled = true;
           confirmAnswer(confirmBtn);
         });
@@ -265,6 +307,14 @@ const Practice = (() => {
       nextBtn.className = st.confirmed ? 'primary-btn' : 'secondary-btn';
       nextBtn.textContent = idx + 1 < questions.length ? 'Siguiente' : 'Ver resultados';
       nextBtn.addEventListener('click', () => {
+        // Si dejó una selección a medias sin confirmar, avisamos: de lo
+        // contrario la pregunta se quedaría sin responder sin que se entere.
+        if (!st.confirmed && st.selected.size > 0 && st.selected.size !== q.correct_count) {
+          const msg =
+            `Has marcado ${st.selected.size} de las ${q.correct_count} respuestas que pide esta pregunta ` +
+            `y no la has confirmado.\n\nSi continúas, quedará SIN RESPONDER. ¿Seguro que quieres continuar?`;
+          if (!confirm(msg)) return;
+        }
         if (idx + 1 < questions.length) {
           idx += 1;
           renderQuestion();
@@ -278,6 +328,9 @@ const Practice = (() => {
       card.appendChild(footer);
 
       runnerEl.appendChild(card);
+
+      // Deja el aviso y el botón de confirmar en su estado inicial correcto.
+      updateSelectionUi();
 
       if (mode === 'timed') updateTimerDisplay();
     }

@@ -1,10 +1,16 @@
 # Práctica de Exámenes
 
-Web para practicar exámenes tipo test (Salesforce ADM 201). **Sitio estático**:
+Web para practicar exámenes tipo test de Salesforce. **Sitio estático**:
 no hay servidor ni base de datos, así que se publica gratis en GitHub Pages y
 funciona incluso sin conexión una vez cargada.
 
-Actualmente incluye **11 exámenes con 681 preguntas**.
+Tiene dos apartados, que se eligen arriba a la derecha:
+
+- **Administrador** (ADM 201): 11 exámenes, 681 preguntas.
+- **Developer** (Platform Developer I): 1 examen, 60 preguntas.
+
+Cada apartado tiene sus propios exámenes, repaso y estadísticas. La web
+recuerda el último apartado usado.
 
 ## Cómo funciona
 
@@ -43,12 +49,16 @@ El pipeline tiene dos pasos: PDF → JSON revisable → archivo de datos de la w
 
 ```bash
 npm install                                  # solo la primera vez (pdfjs-dist)
-node scripts/import-pdfs.js "C:/ruta/a/tus/pdfs"
+node scripts/import-pdfs.js "C:/ruta/a/tus/pdfs"                    # Administrador
+node scripts/import-pdfs.js "C:/ruta/a/tus/pdfs" --cert developer   # Developer
 node scripts/build-exams.js
 ```
 
 1. **`scripts/import-pdfs.js`** lee todos los PDFs de la carpeta y escribe un
-   JSON por examen en `data/exams/`. Imprime un informe de validación y
+   JSON por examen en `data/exams/`. Con `--cert developer` los marca como
+   Developer y les da ids a partir de 101 (`Examen 1` → id 101), para que no
+   choquen con los de Administrador. Pon los PDFs de cada apartado en carpetas
+   separadas. Imprime un informe de validación y
    **descarta** las preguntas dudosas (sin respuesta en la clave, respuesta
    fuera de rango, opciones vacías...), listándolas para que las revises.
 2. **`scripts/build-exams.js`** junta esos JSON y genera `js/data/exams.js`.
@@ -60,6 +70,15 @@ línea), y claves de respuestas al final del documento en formatos como
 `1- AD`, `8. D`, `1.b`, `1 – A, D`, `54.- d`, `3   D`, a dos columnas o con una
 URL detrás.
 
+También reconoce el formato de los exámenes de Developer: `Pregunta 3 de 60`
+como cabecera y la respuesta justo detrás de cada pregunta
+(`Respuesta Correcta: A. Apex Trigger, B. User, D. Apex Class`). En ese formato
+se conservan los saltos de línea para que el código se lea bien.
+
+> El código que en el PDF sea una **imagen** no se puede extraer. Pasa en la
+> pregunta 60 del Developer Examen 1, cuyo código se transcribió a mano en el
+> JSON: si vuelves a importar ese PDF, se pierde y hay que añadirlo de nuevo.
+
 ### Corregir una pregunta a mano
 
 Edita el JSON correspondiente en `data/exams/` y vuelve a ejecutar
@@ -69,6 +88,7 @@ Edita el JSON correspondiente en `data/exams/` y vuelve a ejecutar
 {
   "id": 1,
   "name": "ADM201 Examen 1",
+  "certification": "admin",
   "questions": [
     { "question_text": "...", "options": ["...", "..."], "correct_indices": [1, 3] }
   ]
@@ -76,7 +96,8 @@ Edita el JSON correspondiente en `data/exams/` y vuelve a ejecutar
 ```
 
 `correct_indices` es base 0 (A=0, B=1, C=2...). Un solo valor = respuesta
-única; varios = selección múltiple.
+única; varios = selección múltiple. `certification` es `admin` o `developer`
+(si falta, se asume `admin`).
 
 > Los ids de pregunta se calculan como `id_examen * 1000 + posición`. Si
 > reordenas o insertas preguntas, los ids cambian y el progreso guardado de las

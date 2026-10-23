@@ -14,7 +14,7 @@ const Api = (() => {
   const questionsById = new Map();
   EXAMS_DATA.forEach((exam) => {
     exam.questions.forEach((q) => {
-      questionsById.set(q.id, { ...q, exam_id: exam.id, exam_name: exam.name });
+      questionsById.set(q.id, { ...q, exam_id: exam.id, exam_name: exam.name, certification: exam.certification });
     });
   });
 
@@ -84,8 +84,9 @@ const Api = (() => {
   }
 
   return {
-    async listExams() {
-      return EXAMS_DATA.map((e) => ({
+    // certification: 'admin' | 'developer'. Cada apartado solo ve sus exámenes.
+    async listExams(certification) {
+      return EXAMS_DATA.filter((e) => e.certification === certification).map((e) => ({
         id: e.id,
         name: e.name,
         question_count: e.questions.length,
@@ -192,7 +193,7 @@ const Api = (() => {
       };
     },
 
-    async getStats() {
+    async getStats(certification) {
       const allStats = loadAllStats();
       const now = Date.now();
 
@@ -202,6 +203,7 @@ const Api = (() => {
       const seenQuestions = [];
 
       questionsById.forEach((q) => {
+        if (q.certification !== certification) return;
         const s = statsFor(allStats, q.id);
         totalAttempts += s.times_seen;
         totalCorrect += s.times_correct;
@@ -209,7 +211,7 @@ const Api = (() => {
         if (s.times_seen > 0) seenQuestions.push({ q, s });
       });
 
-      const perExam = EXAMS_DATA.map((exam) => {
+      const perExam = EXAMS_DATA.filter((e) => e.certification === certification).map((exam) => {
         let attempts = 0;
         let correct = 0;
         exam.questions.forEach((q) => {

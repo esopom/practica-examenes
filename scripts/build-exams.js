@@ -47,7 +47,8 @@ for (const { file, data } of files) {
     ...(q.explanation ? { explanation: q.explanation } : {}),
   }));
 
-  exams.push({ id: data.id, name: data.name, questions });
+  // Sin "certification" se asume Administrador (los primeros exámenes no lo traían).
+  exams.push({ id: data.id, name: data.name, certification: data.certification || 'admin', questions });
 }
 
 const header = `// ARCHIVO GENERADO — no lo edites a mano.
@@ -57,6 +58,7 @@ const header = `// ARCHIVO GENERADO — no lo edites a mano.
 // Exámenes incrustados para poder publicar la web como sitio estático, sin
 // servidor ni base de datos. correct_indices usa índices base 0 sobre options
 // (A=0, B=1, ...); más de un índice = pregunta de selección múltiple.
+// certification ('admin' | 'developer') decide en qué apartado sale el examen.
 
 `;
 
@@ -68,4 +70,4 @@ fs.writeFileSync(OUT_FILE, header + body, 'utf8');
 const totalQ = exams.reduce((a, e) => a + e.questions.length, 0);
 console.log(`Generado ${path.relative(process.cwd(), OUT_FILE)}`);
 console.log(`  ${exams.length} exámenes, ${totalQ} preguntas en total:`);
-for (const e of exams) console.log(`    [${e.id}] ${e.name} — ${e.questions.length}`);
+for (const e of exams) console.log(`    [${e.id}] (${e.certification}) ${e.name} — ${e.questions.length}`);

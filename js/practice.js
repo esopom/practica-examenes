@@ -1,8 +1,12 @@
 const Practice = (() => {
   let exams = [];
 
-  async function refreshExamLists() {
-    exams = await Api.listExams();
+  // Sesiones en marcha (práctica y repaso pueden estarlo a la vez), para poder
+  // cancelarlas al cambiar de apartado. runnerEl -> { abort, resultsEl, setupEl }
+  const running = new Map();
+
+  async function refreshExamLists(certification) {
+    exams = await Api.listExams(certification);
 
     const practiceSelect = document.getElementById('practice-exam-select');
     const reviewSelect = document.getElementById('review-exam-select');
@@ -110,10 +114,20 @@ const Practice = (() => {
       timerInterval = null;
     }
 
+    running.set(runnerEl, {
+      abort: () => {
+        finished = true;
+        clearTimer();
+      },
+      resultsEl,
+      setupEl,
+    });
+
     async function finish() {
       if (finished) return;
       finished = true;
       clearTimer();
+      running.delete(runnerEl);
       const summary = await Api.finishSession(sessionId);
       runnerEl.classList.add('hidden');
       renderResults(summary, resultsEl, setupEl);
@@ -402,9 +416,9 @@ const Practice = (() => {
         : '(sin responder)';
       const correctText = r.correct_indices.map((idx) => r.options[idx]).join(', ');
       item.innerHTML = `
-        <div><strong>${i + 1}.</strong> ${escapeHtml(r.question_text)}</div>
-        <div class="result-opt ${r.is_correct ? 'correct-answer' : 'wrong-answer'}">Tu respuesta: ${escapeHtml(selectedText)}</div>
-        ${!r.is_correct ? `<div class="result-opt correct-answer">Correcta: ${escapeHtml(correctText)}</div>` : ''}
+        <div><strong>${i + 1}.</strong> <span class="pre-text">${escapeHtml(r.question_text)}</span></div>
+        <div class="result-opt ${r.is_correct ? 'correct-answer' : 'wrong-answer'}">Tu respuesta: <span class="pre-text">${escapeHtml(selectedText)}</span></div>
+        ${!r.is_correct ? `<div class="result-opt correct-answer">Correcta: <span class="pre-text">${escapeHtml(correctText)}</span></div>` : ''}
         ${r.explanation ? `<div class="q-explanation">${escapeHtml(r.explanation)}</div>` : ''}
       `;
       list.appendChild(item);
@@ -417,5 +431,21 @@ const Practice = (() => {
     });
   }
 
-  return { init, refreshExamLists };
+  function hasRunningSession() {
+    return running.size > 0;
+  }
+
+  // Cancela lo que esté en curso y deja Practicar y Repasar en su pantalla
+  // inicial (también oculta resultados, que serían del otro apartado).
+  function reset() {
+    running.forEach(({ abort }) => abort());
+    running.clear();
+    ['practice', 'review'].forEach((prefix) => {
+      document.getElementById(`${prefix}-runner`).classList.add('hidden');
+      document.getElementById(`${prefix}-results`).classList.add('hidden');
+      document.getElementById(`${prefix}-setup`).classList.remove('hidden');
+    });
+  }
+
+  return { init, refreshExamLists, hasRunningSession, reset };
 })();

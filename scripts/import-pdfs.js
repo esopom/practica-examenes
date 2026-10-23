@@ -1,7 +1,8 @@
 // Convierte una carpeta de PDFs de examen en JSON revisables (data/exams/).
 //
 // Uso:
-//   node scripts/import-pdfs.js "C:/ruta/a/mis/pdfs"
+//   node scripts/import-pdfs.js "C:/ruta/a/mis/pdfs"                    (Administrador)
+//   node scripts/import-pdfs.js "C:/ruta/a/mis/pdfs" --cert developer   (Developer)
 //
 // Genera un .json por PDF e imprime un informe de validación. Las preguntas
 // que no superan la validación NO se incluyen: se listan para que las revises
@@ -14,9 +15,20 @@ const path = require('path');
 const { extractTextFromPdf } = require('./lib/pdf-extract');
 const { parseExamText } = require('./lib/parse-exam');
 
-const srcDir = process.argv[2];
-if (!srcDir) {
-  console.error('Uso: node scripts/import-pdfs.js "<carpeta con PDFs>"');
+// Cada certificación tiene su propio rango de ids de examen. Los ids de
+// pregunta (id_examen * 1000 + posición) deben ser únicos en toda la web, así
+// que "Examen 1" de Developer no puede usar el id 1 de Administrador.
+const CERTS = {
+  admin: { idOffset: 0 },
+  developer: { idOffset: 100 },
+};
+
+const args = process.argv.slice(2);
+const certFlag = args.indexOf('--cert');
+const certification = certFlag >= 0 ? args[certFlag + 1] : 'admin';
+const srcDir = args.find((a, i) => !a.startsWith('--') && (certFlag < 0 || i !== certFlag + 1));
+if (!srcDir || !CERTS[certification]) {
+  console.error('Uso: node scripts/import-pdfs.js "<carpeta con PDFs>" [--cert admin|developer]');
   process.exit(1);
 }
 
@@ -69,15 +81,15 @@ function slugify(text) {
     const { questions, problems, detectedQuestions, keySize } = parseExamText(text);
 
     // Si el nombre no trae número, o está repetido, asignamos el siguiente libre.
-    let id = meta.id;
-    while (id === null || usedIds.has(id)) id = (id || 0) + 1;
+    let id = meta.id === null ? null : meta.id + CERTS[certification].idOffset;
+    while (id === null || usedIds.has(id)) id = (id || CERTS[certification].idOffset) + 1;
     usedIds.add(id);
 
     const outPath = path.join(OUT_DIR, `${slugify(meta.name)}.json`);
     fs.writeFileSync(
       outPath,
       JSON.stringify(
-        { id, name: meta.name, source_filename: file, questions },
+        { id, name: meta.name, certification, source_filename: file, questions },
         null,
         2
       ) + '\n',

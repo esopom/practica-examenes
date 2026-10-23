@@ -125,9 +125,124 @@ function parseQuestions(lines) {
   });
 }
 
+// ---------------------------------------------------------------------------
+// Formato "respuesta inline" (exámenes de Developer):
+//
+//   Pregunta 3 de 60
+//   For which three items can a trace flag be configured? (Choose 3 options)
+//   A. Apex Trigger
+//   ...
+//   Respuesta Correcta:   A. Apex Trigger, B. User, D. Apex Class
+//
+// Aquí la respuesta va tras cada pregunta (no hay clave al final) y los
+// enunciados y opciones traen código, así que se conservan los saltos de línea.
+// ---------------------------------------------------------------------------
+const RE_INLINE_QSTART = /^\s*Pregunta\s+(\d{1,3})\s+de\s+\d{1,3}\s*$/i;
+const RE_INLINE_ANSWER = /^\s*Respuesta\s+Correcta\s*:\s*(.*)$/i;
+const RE_INLINE_CHOOSE = /\(?\s*choose\s*(\d+)\s*(?:options?|answers?)?\s*\)?/i;
+
+function isInlineAnswerFormat(lines) {
+  return lines.filter((ln) => RE_INLINE_QSTART.test(ln)).length >= 5;
+}
+
+// Une las líneas que el PDF partió por llegar al margen (prosa larga) y deja
+// separadas las cortas (código), para que se lean igual que en el original.
+function joinWrapped(lines) {
+  const out = [];
+  for (const raw of lines) {
+    const ln = raw.trim();
+    if (!ln) continue;
+    const prev = out[out.length - 1];
+    // Solo se une si la anterior llegó al margen sin cerrar frase y la actual
+    // no parece código.
+    if (prev !== undefined && prev.length >= 80 && !/[.:?{};]$/.test(prev) && !/[{};]$/.test(ln)) {
+      out[out.length - 1] = `${prev} ${ln}`;
+    } else {
+      out.push(ln);
+    }
+  }
+  return out.join('\n');
+}
+
+const normalize = (s) => s.replace(/\s+/g, '').replace(/[.,;]+$/, '').toLowerCase();
+
+function parseInlineAnswerExam(lines) {
+  const starts = [];
+  lines.forEach((ln, i) => {
+    const m = ln.match(RE_INLINE_QSTART);
+    if (m) starts.push({ i, n: Number(m[1]) });
+  });
+
+  const questions = [];
+  const problems = [];
+
+  starts.forEach((st, s) => {
+    const block = lines.slice(st.i + 1, s + 1 < starts.length ? starts[s + 1].i : lines.length);
+    const issues = [];
+
+    const ansLine = block.findIndex((ln) => RE_INLINE_ANSWER.test(ln));
+    const body = ansLine >= 0 ? block.slice(0, ansLine) : block;
+    const answerText =
+      ansLine >= 0 ? [block[ansLine].match(RE_INLINE_ANSWER)[1], ...block.slice(ansLine + 1)].join(' ').trim() : '';
+
+    // Opciones: líneas que empiezan por "A.", "B.", … en orden.
+    const optStarts = [];
+    body.forEach((ln, i) => {
+      const letter = LETTERS[optStarts.length];
+      if (letter && new RegExp(`^\\s*${letter}\\.\\s`).test(ln)) optStarts.push(i);
+    });
+
+    const questionLines = body.slice(0, optStarts.length ? optStarts[0] : body.length);
+    const options = optStarts.map((from, k) => {
+      const to = k + 1 < optStarts.length ? optStarts[k + 1] : body.length;
+      const optLines = body.slice(from, to);
+      optLines[0] = optLines[0].replace(/^\s*[A-F]\.\s*/, '');
+      return joinWrapped(optLines);
+    });
+
+    let questionText = joinWrapped(questionLines);
+    const chooseMatch = questionText.match(RE_INLINE_CHOOSE);
+    const expectCount = chooseMatch ? Number(chooseMatch[1]) : null;
+    // Se quita el "(Choose N options)": la interfaz ya avisa de cuántas marcar.
+    questionText = questionText.replace(RE_INLINE_CHOOSE, '').replace(/[ \t]+\n/g, '\n').trim();
+
+    // Letras de la respuesta: la primera y las que siguen a una coma.
+    const ans = [];
+    const reLetter = /(?:^|,\s*)([A-F])\.\s/g;
+    let m;
+    while ((m = reLetter.exec(answerText)) !== null) ans.push(LETTERS.indexOf(m[1]));
+    const correct = [...new Set(ans)].sort((a, b) => a - b);
+
+    if (!answerText) issues.push('sin "Respuesta Correcta"');
+    if (!correct.length && answerText) issues.push('no se entiende la respuesta');
+    if (options.length < 2) issues.push(`solo ${options.length} opciones`);
+    if (correct.some((i) => i >= options.length)) issues.push('respuesta fuera de rango');
+    if (expectCount && correct.length !== expectCount) {
+      issues.push(`dice "Choose ${expectCount}" pero la respuesta da ${correct.length}`);
+    }
+    // La respuesta repite el texto de las opciones: si no cuadra, algo se ha
+    // partido mal.
+    const normAnswer = normalize(answerText);
+    if (correct.some((i) => options[i] && !normAnswer.includes(normalize(options[i])))) {
+      issues.push('el texto de la respuesta no coincide con la opción');
+    }
+    if (!questionText || questionText.length < 15) issues.push('enunciado demasiado corto');
+    if (options.some((o) => !o || !o.trim())) issues.push('alguna opción vacía');
+
+    if (issues.length) {
+      problems.push({ n: st.n, issues });
+    } else {
+      questions.push({ question_text: questionText, options, correct_indices: correct });
+    }
+  });
+
+  return { questions, problems, detectedQuestions: starts.length, keySize: starts.length };
+}
+
 // Devuelve { questions, problems } tras validar cada pregunta.
 function parseExamText(text) {
   const lines = text.split('\n');
+  if (isInlineAnswerFormat(lines)) return parseInlineAnswerExam(lines);
   const keyStart = findKeyStart(lines);
   const key = keyStart !== null ? parseKey(lines, keyStart) : new Map();
   const parsed = parseQuestions(keyStart !== null ? lines.slice(0, keyStart) : lines);

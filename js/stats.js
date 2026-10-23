@@ -1,11 +1,11 @@
 const Stats = (() => {
-  async function render() {
+  async function render(certification) {
     const container = document.getElementById('stats-content');
     container.innerHTML = 'Cargando...';
 
     let data;
     try {
-      data = await Api.getStats();
+      data = await Api.getStats(certification);
     } catch (err) {
       container.textContent = err.message;
       return;

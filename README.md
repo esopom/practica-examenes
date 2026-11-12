@@ -6,7 +6,7 @@ funciona incluso sin conexión una vez cargada.
 
 Tiene dos apartados, que se eligen arriba a la derecha:
 
-- **Administrador** (ADM 201): 11 exámenes, 681 preguntas.
+- **Administrador** (ADM 201): 12 exámenes, 741 preguntas.
 - **Developer** (Platform Developer I): 1 examen, 60 preguntas.
 
 Cada apartado tiene sus propios exámenes, repaso y estadísticas. La web
@@ -133,3 +133,14 @@ scripts/
   serve.js            servidor estático local
   lib/                extractor de PDF y parser de exámenes
 ```
+
+## Notas sobre el examen "Admin SU22 Examen 2"
+
+Viene de un formulario de Google Forms ("Admin - SU22 - 2"), no de un PDF, y
+el formulario no publica las respuestas correctas:
+
+- 30 preguntas ya estaban en los exámenes 10 y 11, y sus respuestas se copiaron
+  de ahí.
+- Las otras 30 las resolvió Claude. Llevan una explicación que empieza por
+  "Respuesta propuesta", que se ve al corregir. Si alguna no te convence, corrígela en
+  `data/exams/admin-su22-examen-2.json`.

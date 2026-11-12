@@ -466,3 +466,63 @@ table.stats-table th {
 }
 table.stats-table tbody tr:hover { background: #f8f8f8; }
 table.stats-table tbody tr:last-child td { border-bottom: none; }
+
+/* ---------- Letras de opción, marcar para revisar y cuadrícula ---------- */
+.q-letter { font-weight: 700; color: var(--brand-dark); margin-right: 8px; }
+.q-option-btn.correct .q-letter { color: var(--correct); }
+.q-option-btn.incorrect .q-letter { color: var(--incorrect); }
+
+.q-orig-num { color: var(--text-muted); opacity: 0.85; }
+.q-progress-right { display: inline-flex; align-items: center; gap: 12px; }
+
+.flag-btn {
+  font: inherit;
+  font-size: 0.8125rem;
+  padding: 4px 10px;
+  border: 1px solid var(--border-input);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.flag-btn:hover { border-color: var(--warning); color: var(--warning); }
+.flag-btn.active { border-color: var(--warning); background: #fff4e5; color: #8c4b02; font-weight: 600; }
+
+.q-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 10px 0 14px;
+}
+.q-grid-cell {
+  position: relative;
+  min-width: 30px;
+  height: 28px;
+  padding: 0 4px;
+  font: inherit;
+  font-size: 0.75rem;
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.q-grid-cell:hover { border-color: var(--brand); }
+.q-grid-cell.answered { background: var(--brand-bg); border-color: #a9c9f2; color: var(--brand-dark); }
+.q-grid-cell.flagged { border-color: var(--warning); box-shadow: inset 0 -3px 0 var(--warning); }
+.q-grid-cell.flagged::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--warning);
+}
+.q-grid-cell.current { outline: 2px solid var(--brand); outline-offset: 1px; font-weight: 700; color: var(--text); }
+.q-grid-legend { font-size: 0.75rem; color: #8c4b02; margin: -8px 0 12px; }
+
+@media (max-width: 560px) {
+  .q-progress { flex-wrap: wrap; gap: 6px; }
+}

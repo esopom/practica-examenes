@@ -107,7 +107,24 @@ const Practice = (() => {
 
     // Estado por pregunta: permite ir adelante/atrás sin perder la selección
     // ni el resultado de las ya confirmadas.
-    const state = questions.map(() => ({ selected: new Set(), confirmed: false, result: null }));
+    // flagged = marcada por el usuario para volver a ella más tarde.
+    const state = questions.map(() => ({ selected: new Set(), confirmed: false, result: null, flagged: false }));
+
+    // Va a la pregunta i. Si en la actual hay una selección a medias sin
+    // confirmar, avisa: si no, se quedaría sin responder sin que se entere.
+    function goTo(i) {
+      const q = questions[idx];
+      const st = state[idx];
+      if (i === idx) return;
+      if (!st.confirmed && st.selected.size > 0 && st.selected.size !== q.correct_count) {
+        const msg =
+          `Has marcado ${st.selected.size} de las ${q.correct_count} respuestas que pide esta pregunta ` +
+          `y no la has confirmado.\n\nSi continúas, quedará SIN RESPONDER. ¿Seguro que quieres continuar?`;
+        if (!confirm(msg)) return;
+      }
+      idx = i;
+      renderQuestion();
+    }
 
     function clearTimer() {
       if (timerInterval) clearInterval(timerInterval);
@@ -135,13 +152,17 @@ const Practice = (() => {
 
     function maybeFinish() {
       const pending = state.filter((s) => !s.confirmed).length;
+      const flagged = state.filter((s) => s.flagged).length;
+      const avisos = [];
       if (pending > 0) {
-        const msg =
-          pending === 1
-            ? 'Hay 1 pregunta sin responder. ¿Quieres terminar igualmente?'
-            : `Hay ${pending} preguntas sin responder. ¿Quieres terminar igualmente?`;
-        if (!confirm(msg)) return;
+        avisos.push(pending === 1 ? 'Hay 1 pregunta sin responder.' : `Hay ${pending} preguntas sin responder.`);
       }
+      if (flagged > 0) {
+        avisos.push(
+          flagged === 1 ? 'Tienes 1 pregunta marcada para revisar.' : `Tienes ${flagged} preguntas marcadas para revisar.`
+        );
+      }
+      if (avisos.length && !confirm(`${avisos.join('\n')}\n\n¿Quieres terminar igualmente?`)) return;
       finish();
     }
 
@@ -156,14 +177,35 @@ const Practice = (() => {
       const progress = document.createElement('div');
       progress.className = 'q-progress';
       const progLeft = document.createElement('span');
+      // El id de pregunta es id_examen * 1000 + posición: la posición es su
+      // número en el examen original (las sesiones van en orden aleatorio).
+      const numEnExamen = q.id % 1000;
       progLeft.textContent = `Pregunta ${idx + 1} de ${questions.length}`;
+      const origNum = document.createElement('span');
+      origNum.className = 'q-orig-num';
+      origNum.textContent = ` · nº ${numEnExamen} del examen`;
+      progLeft.appendChild(origNum);
       progress.appendChild(progLeft);
+
+      const progRight = document.createElement('span');
+      progRight.className = 'q-progress-right';
+      const flagBtn = document.createElement('button');
+      flagBtn.type = 'button';
+      flagBtn.className = 'flag-btn' + (st.flagged ? ' active' : '');
+      flagBtn.setAttribute('aria-pressed', String(st.flagged));
+      flagBtn.textContent = st.flagged ? '⚑ Marcada para revisar' : '⚐ Marcar para revisar';
+      flagBtn.addEventListener('click', () => {
+        st.flagged = !st.flagged;
+        renderQuestion();
+      });
+      progRight.appendChild(flagBtn);
       if (mode === 'timed') {
         const timerSpan = document.createElement('span');
         timerSpan.className = 'timer';
         timerSpan.id = 'timer-display';
-        progress.appendChild(timerSpan);
+        progRight.appendChild(timerSpan);
       }
+      progress.appendChild(progRight);
       card.appendChild(progress);
 
       const track = document.createElement('div');
@@ -173,6 +215,35 @@ const Practice = (() => {
       fill.style.width = `${Math.round(((idx + 1) / questions.length) * 100)}%`;
       track.appendChild(fill);
       card.appendChild(track);
+
+      // Cuadrícula con todas las preguntas: muestra cuáles están respondidas
+      // y marcadas, y permite saltar a cualquiera.
+      const navGrid = document.createElement('div');
+      navGrid.className = 'q-grid';
+      state.forEach((s, i) => {
+        const cell = document.createElement('button');
+        cell.type = 'button';
+        cell.className = 'q-grid-cell';
+        if (s.confirmed) cell.classList.add('answered');
+        if (s.flagged) cell.classList.add('flagged');
+        if (i === idx) cell.classList.add('current');
+        cell.textContent = String(i + 1);
+        const estado = [s.confirmed ? 'respondida' : 'sin responder', s.flagged ? 'marcada para revisar' : '']
+          .filter(Boolean)
+          .join(', ');
+        cell.title = `Pregunta ${i + 1}: ${estado}`;
+        cell.addEventListener('click', () => goTo(i));
+        navGrid.appendChild(cell);
+      });
+      card.appendChild(navGrid);
+
+      const flaggedCount = state.filter((s) => s.flagged).length;
+      if (flaggedCount > 0) {
+        const legend = document.createElement('div');
+        legend.className = 'q-grid-legend';
+        legend.textContent = `${flaggedCount} marcada${flaggedCount === 1 ? '' : 's'} para revisar`;
+        card.appendChild(legend);
+      }
 
       const qText = document.createElement('div');
       qText.className = 'q-text';
@@ -234,7 +305,11 @@ const Practice = (() => {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'q-option-btn';
-        btn.textContent = opt;
+        const letter = document.createElement('span');
+        letter.className = 'q-letter';
+        letter.textContent = `${String.fromCharCode(65 + oIdx)}.`;
+        btn.appendChild(letter);
+        btn.appendChild(document.createTextNode(opt));
 
         if (st.selected.has(oIdx)) btn.classList.add('selected');
 
@@ -295,9 +370,7 @@ const Practice = (() => {
       prevBtn.textContent = 'Anterior';
       prevBtn.disabled = idx === 0;
       prevBtn.addEventListener('click', () => {
-        if (idx === 0) return;
-        idx -= 1;
-        renderQuestion();
+        if (idx > 0) goTo(idx - 1);
       });
       navWrap.appendChild(prevBtn);
 
@@ -321,20 +394,18 @@ const Practice = (() => {
       nextBtn.className = st.confirmed ? 'primary-btn' : 'secondary-btn';
       nextBtn.textContent = idx + 1 < questions.length ? 'Siguiente' : 'Ver resultados';
       nextBtn.addEventListener('click', () => {
-        // Si dejó una selección a medias sin confirmar, avisamos: de lo
-        // contrario la pregunta se quedaría sin responder sin que se entere.
+        if (idx + 1 < questions.length) {
+          goTo(idx + 1);
+          return;
+        }
+        // Última pregunta: mismo aviso que goTo si dejó una selección a medias.
         if (!st.confirmed && st.selected.size > 0 && st.selected.size !== q.correct_count) {
           const msg =
             `Has marcado ${st.selected.size} de las ${q.correct_count} respuestas que pide esta pregunta ` +
             `y no la has confirmado.\n\nSi continúas, quedará SIN RESPONDER. ¿Seguro que quieres continuar?`;
           if (!confirm(msg)) return;
         }
-        if (idx + 1 < questions.length) {
-          idx += 1;
-          renderQuestion();
-        } else {
-          maybeFinish();
-        }
+        maybeFinish();
       });
       navWrap.appendChild(nextBtn);
 

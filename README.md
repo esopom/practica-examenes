@@ -25,6 +25,12 @@ recuerda el último apartado usado.
    - Cada sesión usa **todas** las preguntas del examen (60, 63, 64 o 65 según
      cuál), siempre en orden aleatorio.
    - *Práctica libre*: feedback inmediato tras cada respuesta.
+   - Las opciones van con letra (A, B, C…) y junto al número de la sesión se
+     ve el número de la pregunta en el examen original (`nº 28 del examen`).
+   - *Marcar para revisar*: deja una marca en la pregunta para volver luego.
+     Una cuadrícula con todas las preguntas muestra cuáles están respondidas y
+     marcadas, y permite saltar a cualquiera. Al terminar se avisa si quedan
+     marcadas.
    - *Simulacro cronometrado*: sin feedback hasta el final, con tiempo límite.
    - Las preguntas de selección múltiple se corrigen por conjunto: hay que
      marcar todas las correctas y ninguna incorrecta. No se puede confirmar

@@ -1,0 +1,828 @@
+{
+  "id": 13,
+  "name": "Admin SU22 Examen 1",
+  "certification": "admin",
+  "source_filename": "Google Forms: Admin - SU22 - 1 (20220608-Administrator) - salesforceform2.pdf",
+  "questions": [
+    {
+      "question_text": "Northern Trail Outfitters (NTO) has deployed My Domain. The Chief Marketing Officer wants to make sure that all of the Salesforce users log in to the branded login URL. There needs to be a grace period for the users' bookmarks to be updated. How should the administrator configure the policies in My Domain settings?",
+      "options": [
+        "Set the login policy to prevent login from https://login.salesforce.com",
+        "Set the Redirect policy to Do Not redirect.",
+        "Set the login policy to require login from https://nto.my.salesforce.com",
+        "Set the redirect policy to Redirect with a warning to the same page within the domain."
+      ],
+      "correct_indices": [
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): 'Redirect with a warning' lleva a los usuarios al dominio nuevo avisándoles, lo que da margen para actualizar los marcadores."
+    },
+    {
+      "question_text": "Ursa Major Solar is evaluating Salesforce for its service team and would like to know what objects are available out of the box. Which three of the standard objects are available to an administrator considering a support use case?",
+      "options": [
+        "Contract",
+        "Request",
+        "Case",
+        "Ticket",
+        "Account"
+      ],
+      "correct_indices": [
+        0,
+        2,
+        4
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Case, Account y Contract son objetos estándar; Request y Ticket no existen como objetos estándar."
+    },
+    {
+      "question_text": "An administrator at Universal Containers needs a simple way to trigger an alert to the director of sales when opportunities reach an amount of $500,000. What should an administrator configure to meet this requirement?",
+      "options": [
+        "Set up Big Deal Alerts for the amount.",
+        "Key Deals component on the homepage",
+        "Opportunity warnings in Kanban view",
+        "Enable Opportunity Update Reminders"
+      ],
+      "correct_indices": [
+        0
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Big Deal Alerts envía un email cuando una oportunidad alcanza un importe y probabilidad configurados."
+    },
+    {
+      "question_text": "The administrator has been asked to automate a simple field update on the account. When a support agent changes the status of the account to 'Audited', they would like the system to automatically update the Audited Date field on the account with today's date. Which tool should an administrator use to complete this automation?",
+      "options": [
+        "Flow Builder",
+        "Validation Rule",
+        "Formula Field",
+        "Approval Process"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "DreamHouse Realty needs to use consistent picklist values in the Category field on Accounts and Cases, with values respective to record types. Which two features should the administrator use to fulfill this requirement?",
+      "options": [
+        "Custom picklist",
+        "Multi-select picklist",
+        "Global picklist",
+        "Dependent picklist"
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "Northern Trail Outfitters wants to track ROI for contacts that are key stakeholders for opportunities. The VP of sales requested that this information be accessible on the opportunity and available for reporting. Which two options should the administrator configure to meet these requirements?",
+      "options": [
+        "Customize Opportunity Contact Role.",
+        "Customize Campaign Role.",
+        "Add the Campaign Member related list to the Opportunity page layout.",
+        "Customize Campaign Member Role",
+        "Add the Opportunity Contact Role related list to the Opportunity page layout."
+      ],
+      "correct_indices": [
+        0,
+        4
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Opportunity Contact Roles relacionan contactos con la oportunidad y se pueden reportar; hay que personalizar los roles y añadir la related list al layout."
+    },
+    {
+      "question_text": "A user at Cloud Kicks is having issues logging in to Salesforce. The user asks the administrator to reset their password. Which two should the administrator consider when resetting the user's password?",
+      "options": [
+        "Resetting the password will change the password policy",
+        "Single sign-on users can reset their own passwords using the forgot password link.",
+        "Resetting a locked-out user's password automatically unlocks the user's account.",
+        "After resetting a password, the user may be required to activate their device to successfully log in to Salesforce."
+      ],
+      "correct_indices": [
+        2,
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Al resetear la contraseña de un usuario bloqueado se desbloquea, y puede tener que verificar/activar su dispositivo. Los usuarios SSO no pueden resetear su contraseña desde Salesforce."
+    },
+    {
+      "question_text": "The administrator at Cloud Kicks has a custom picklist field on Lead, which is missing on the Contact when leads are converted. Which two items should the administrator do to make sure these values are populated?",
+      "options": [
+        "Set the picklist field to be required on the Lead object.",
+        "Update the picklist value with a validation Rule.",
+        "Create a custom picklist field on Contact.",
+        "Map the picklist field on the Lead to the Contact."
+      ],
+      "correct_indices": [
+        2,
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Los campos personalizados de Lead solo se copian en la conversión si existe un campo equivalente en Contact y está mapeado."
+    },
+    {
+      "question_text": "Cloud Kicks has a customer success agent going on leave and needs to change ownership on multiple cases. Which two users are able to fulfill this request?",
+      "options": [
+        "A user with the System Administrator profile.",
+        "A user with the Manage Cases permission.",
+        "A user with a manager role above the agent.",
+        "A user with Read permission on the account."
+      ],
+      "correct_indices": [
+        0,
+        1
+      ]
+    },
+    {
+      "question_text": "The Human Resources department at Northern Trail Outfitters wants employees to provide feedback about their managers using a custom object in Salesforce. It is important that managers are unable to see the feedback records from their staff. How should an administrator configure the custom object to meet this requirement?",
+      "options": [
+        "Uncheck Grant Access Using Hierarchies.",
+        "Configure an owner-based sharing rule.",
+        "Define a criteria-based sharing rule.",
+        "Set the Default External Access to Private."
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "An administrator supporting a global team of Salesforce users has been asked to configure company settings. Which two options should the administrator configure?",
+      "options": [
+        "Currency Locale",
+        "Login Hours",
+        "Password Policy",
+        "Default Language"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "Ursa Major Solar has service level agreements (SLA) that are routed to support queues. Cases that meet the 24 hour SLA need to be automatically re-assigned to the next tier queue. Which feature should be used to fulfill this requirement?",
+      "options": [
+        "Case escalation rule",
+        "Case assignment rule",
+        "Einstein Case Routing",
+        "Auto-response rule"
+      ],
+      "correct_indices": [
+        0
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Las escalation rules reasignan casos automáticamente cuando pasan un tiempo sin resolverse."
+    },
+    {
+      "question_text": "Northern Trail Outfitters has hired interns to enter Leads into Salesforce and has requested a way to identify these new records from existing Leads. What approach should an administrator take to meet this requirement?",
+      "options": [
+        "Update the active Lead Assignment Rules.",
+        "Create a separate Lead Lightning App.",
+        "Set up Web-to-Lead for the interns' use.",
+        "Define a record type and assign it to the interns."
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "An administrator at DreamHouse Realty wants an easier way to assign cases based on agent capacity and skill set. Which feature should an administrator enable to meet this requirement?",
+      "options": [
+        "Territory Management",
+        "Escalation Rules",
+        "Omni-Channel",
+        "Knowledge Management"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "When users log in to Salesforce via the user interface, which two settings does the system check for authentication?",
+      "options": [
+        "The user's Two-Factor Authentication for API Logins permission",
+        "The user's profile login hours restrictions",
+        "The role IP address restrictions",
+        "The user's Two-Factor Authentication for User Interface Logins permission"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): En el login por interfaz se comprueban las login hours del perfil y el permiso de 2FA para logins de interfaz. Las restricciones de IP son del perfil, no del rol."
+    },
+    {
+      "question_text": "Universal Containers has enabled Data Protection and Privacy for its org. Which page layouts will have the Individual field available for tracking data privacy information?",
+      "options": [
+        "Case and Opportunity",
+        "Contact, Lead and Person Account",
+        "Individual, User and Account",
+        "Account and User"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "DreamHouse Realty (DHR) wants a templated process with a mortgage calculator that generates leads for loans. DHR needs to complete the project within 30 days and has maxed out its budget for the year. Which AppExchange item should help the administrator meet the request?",
+      "options": [
+        "Lightning Data",
+        "Lightning Community",
+        "Flow Solutions",
+        "Bolt Solutions"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Which setting on a profile makes a tab hidden in the App Launcher or visible in any app, but still allows a user to view records that would normally be found under this tab?",
+      "options": [
+        "App Permissions",
+        "Org-wide Defaults.",
+        "Object Permissions",
+        "Tab Settings"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "An administrator has been asked to change the data type of an Auto Number field to a text field. What should the administrator be aware of before changing the field?",
+      "options": [
+        "Changing an existing Auto Number field to Text is prevented.",
+        "Existing field values will remain unchanged.",
+        "Existing field values will be deleted.",
+        "Existing field values will be converted."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Which tool should an administrator use to identify and fix potential session vulnerabilities?",
+      "options": [
+        "Organization-Wide Defaults.",
+        "Field History Tracking",
+        "Security Health Check",
+        "Set up audit Trail"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Users at Cloud Kicks want to be able to create a task that will repeat every two weeks. What should an administrator do to meet this requirement?",
+      "options": [
+        "Enable Creation of Recurring Tasks",
+        "Flow to create recurring tasks",
+        "Turn on Recurring Activities",
+        "Workflow rule to create recurring tasks"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "The administrator at Cloud Kicks has created an approval process for time off requests. Which two automated actions are available to be added as part of the approval process?",
+      "options": [
+        "Field Update",
+        "Chatter Post",
+        "Email Alert",
+        "Autolaunched Flow"
+      ],
+      "correct_indices": [
+        0,
+        2
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Los approval processes admiten field updates, email alerts, tareas y outbound messages."
+    },
+    {
+      "question_text": "An administrator needs to create a one-to-many relationship between two objects with limited access to child records. What type of field should an administrator use?",
+      "options": [
+        "Roll-up summary",
+        "Master-detail field",
+        "Lookup field",
+        "Cross object formula"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks wants a report to categorize accounts into small, medium and large based on the dollar value found in the Contract Value field. What feature should an administrator use to meet this request?",
+      "options": [
+        "Filter Logic",
+        "Group Rows",
+        "Detail Column",
+        "Bucket Column"
+      ],
+      "correct_indices": [
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Un bucket column agrupa valores en rangos (pequeño, mediano, grande) sin crear campos."
+    },
+    {
+      "question_text": "Once an opportunity reaches the negotiation stage at Cloud Kicks, the Amount field becomes required for sales users. Sales managers need to be able to move opportunities into this stage without knowing the amount. How should the administrator require this field during the negotiation stage for sales users but allow their managers to make changes?",
+      "options": [
+        "Assign the Administrator profile to the managers",
+        "Configure a validation rule to meet the criteria",
+        "Create a formula field to fill in the field for managers.",
+        "Make the field required for all users."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "An administrator wants to create a form in Salesforce for users to fill out when they lose a client. Which automation tool supports creating a wizard to accomplish this goal?",
+      "options": [
+        "Outbound Message",
+        "Process Builder",
+        "Flow Builder",
+        "Approval Process"
+      ],
+      "correct_indices": [
+        2
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Solo Flow Builder (screen flows) permite crear asistentes con pantallas."
+    },
+    {
+      "question_text": "A sales rep at Ursa Major Solar has launched a series of networking events. They are hosting one event per month and want to be able to report on Campaign ROI by month and series. How should the administrator set up the Campaign to simplify reporting?",
+      "options": [
+        "Create individual Campaigns that all have the same name.",
+        "Use Campaign Hierarchy where the monthly events roll up to a parent Campaign",
+        "Configure Campaign Member Statuses to record which event Members attended",
+        "Add different record types for the monthly events types"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Northern Trail Outfitters has a custom quick action on Account that creates a new Case. How should an administrator make the quick action available on the Salesforce mobile app?",
+      "options": [
+        "Create a custom Lightning App with the action",
+        "Modify compact Case page layout to include the action",
+        "Include the action in the Salesforce Mobile Navigation menu",
+        "Add Salesforce Mobile and Lightning Experience action to the page layout"
+      ],
+      "correct_indices": [
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): La acción debe estar en la sección 'Salesforce Mobile and Lightning Experience Actions' del page layout de Account."
+    },
+    {
+      "question_text": "The Sales manager at DreamHouse Realty wants the sales users to have a quick way to view and edit the Opportunities in their pipeline expected to close in the next 90 days. What should an administrator do to accomplish this request?",
+      "options": [
+        "Enable Sales Console and show users how to open a tab for each opportunity in the pipeline that meets the requirements.",
+        "Create a custom report and schedule the sales users to receive it each day as a reminder to update their opportunities",
+        "Create a list view on the Opportunity object and recommend users switch the view to kanban to edit by drag and drop",
+        "Make a new Sales dashboard and add a component that shows all opportunities that meet the criteria"
+      ],
+      "correct_indices": [
+        2
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Una list view filtrada por fecha de cierre en vista Kanban permite ver y editar arrastrando entre fases."
+    },
+    {
+      "question_text": "Cloud Kicks has the organization-wide defaults for Opportunity set to Private. Which two features should the administrator use to open up access to opportunity records for sales users working on collaborative deals?",
+      "options": [
+        "Profiles",
+        "Sharing rules",
+        "Sharing Set",
+        "Role hierarchy"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Sharing rules y role hierarchy amplían el acceso por encima de los OWD. Los sharing sets son para usuarios de comunidades y los perfiles no dan acceso a registros."
+    },
+    {
+      "question_text": "An administrator is planning to use Data Loader to mass import new records to a custom object from a new API. What will the administrator need to do to use the Data Loader?",
+      "options": [
+        "Reset their password and their security token.",
+        "Add a permission set that allows them to import data.",
+        "Use the Data Import Tool to mass import custom object records.",
+        "Append their security token at the end of their password to login."
+      ],
+      "correct_indices": [
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Data Loader inicia sesión por API; desde una IP no de confianza hay que añadir el security token al final de la contraseña."
+    },
+    {
+      "question_text": "DreamHouse Realty wants to offer a form on its Experience Cloud site where inspectors will submit findings from a property inspection. Which feature should an administrator place on the page to fulfill this requirement?",
+      "options": [
+        "Record Detail",
+        "Related List",
+        "Screen Flow",
+        "Autolaunched Flow"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Universal Containers requires that when an opportunity is closed won, all other open opportunities on the same account must be marked as closed lost. Which automation solution should an administrator use to implement this request?",
+      "options": [
+        "Quick Action",
+        "Flow Builder",
+        "Workflow Rule",
+        "Outbound Message"
+      ],
+      "correct_indices": [
+        1
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Hay que actualizar otros registros relacionados, cosa que solo puede hacer un flow."
+    },
+    {
+      "question_text": "Cloud Kicks intends to protect data with backups by using the data export service. Which two considerations should the administrator remember when scheduling the export?",
+      "options": [
+        "Metadata backups must be run via a separate process.",
+        "Data export service should be run from a sandbox.",
+        "Data backups are limited to weekly or monthly intervals.",
+        "Metadata backups are limited to sandbox refresh intervals."
+      ],
+      "correct_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "question_text": "The VP of sales at DreamHouse Realty has requested a dashboard to visualize enterprise sales across the different teams. The key piece of data is the total of all sales for the year and the progress to the enterprise sales goal. What dashboard component will effectively show this number and the proximity to the total goal as a single value?",
+      "options": [
+        "Stacked Bar",
+        "Donut",
+        "Table",
+        "Gauge"
+      ],
+      "correct_indices": [
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Un gauge muestra un único valor frente a un objetivo."
+    },
+    {
+      "question_text": "Northern Trail Outfitters has asked an administrator to ensure that when a contact with a title of CEO is created, the contact's account record gets updated with the CEO's name. Which feature should an administrator use to implement this request?",
+      "options": [
+        "Process Builder",
+        "Quick Action",
+        "Workflow Rule",
+        "Validation Rule"
+      ],
+      "correct_indices": [
+        0
+      ]
+    },
+    {
+      "question_text": "The events manager at DreamHouse Realty has a hot lead from a successful open house that needs to become a Contact with an associated Opportunity. How should this be accomplished from the Campaign keeping the associated Campaign Member history?",
+      "options": [
+        "Delete the lead and create a new Contact and Opportunity.",
+        "Clone the lead and convert the cloned record to Contact",
+        "Add a Contact from the Campaign Member Detail page",
+        "Convert the lead from the Campaign Member Detail page"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks wants to update a screen flow so that if a checkbox field High Value Customer is set to true, the first screen is skipped and the user is directed to the second screen. How should the administrator configure the decision element?",
+      "options": [
+        "Use the contains operator and \"High Value Customer\" as the value.",
+        "Use the contains operator and {!$GlobalConstant.False} as the value.",
+        "Use the contains operator and {!$GlobalConstant.True} as the value.",
+        "Use the equals operator and \"High Value Customer\" as the value."
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks needs to be able to show different picklist values for sales and marketing users. Which two options will meet this requirement?",
+      "options": [
+        "Two page layouts, one record type, two picklists",
+        "One page layout, two record types, one picklist",
+        "One record type, two profiles, one picklist",
+        "Two permission sets, one record type, one picklist"
+      ],
+      "correct_indices": [
+        0,
+        1
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): O bien dos record types que filtran los valores del mismo picklist, o bien dos campos picklist en dos layouts asignados a cada perfil."
+    },
+    {
+      "question_text": "Users have noticed that when they click on a report in a dashboard to view the report details, the values in the report are different from the values displayed on the dashboard. What are the two reasons this is likely to occur?",
+      "options": [
+        "The report needs to be refreshed.",
+        "The dashboard needs to be refreshed.",
+        "The current user does not have access to the report folder.",
+        "The running dashboard user and viewer have different permissions"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): El dashboard muestra datos del último refresco y con la visibilidad del running user; el informe se ejecuta en el momento con la del usuario."
+    },
+    {
+      "question_text": "Universal Containers has a Contact Lightning record page with a component that shows LinkedIn data. The sales team would like to only show this component to sales users when they are on their mobile phones. Which two solutions should the administrator use to fulfill this requirement?",
+      "options": [
+        "Filter the component visibility with User > Profile > Name = Sales User.",
+        "Filter the component visibility with View = Mobile/Tablet.",
+        "Filter the component visibility with User > Role > Name = Sales User.",
+        "Filter the component visibility with Form Factor = Phone"
+      ],
+      "correct_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "question_text": "An administrator at DreamHouse Realty needs to create customized pages for the Salesforce mobile app. Which two types of pages could an administrator build and customize using the Lightning App Builder?",
+      "options": [
+        "Dashboard page",
+        "Record page",
+        "User page",
+        "App page"
+      ],
+      "correct_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "question_text": "Universal Containers wants to prevent its service team from accessing deal records. While service users are unable to access deal list views, they are able to find deal records via search. What option should the administrator adjust to fully restrict access?",
+      "options": [
+        "Page layouts and field-level security",
+        "App permissions and search terms",
+        "Record settings and search index",
+        "Permissions and tab visibility"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "The sales team at Ursa Major Solar has asked the administrator to automate an outbound message. What should the administrator utilize to satisfy the request?",
+      "options": [
+        "Process Builder.",
+        "Workflow Rule.",
+        "Flow Builder",
+        "Task Assignment"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "An administrator at Cloud Kicks has a flow in production that is supposed to create new records. However, no new records are being created. What could the issue be?",
+      "options": [
+        "The flow is inactive.",
+        "The flow is read only.",
+        "The flow trigger is missing.",
+        "The flow URL is deactivated."
+      ],
+      "correct_indices": [
+        0
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Un flow que no está activado no se ejecuta."
+    },
+    {
+      "question_text": "Universal Containers is trying to improve the user experience when searching for the right status on a case. The company currently has one support process that is used for all record types on cases. The support process has 10 status values. Service reps say they never need more than five depending on what kind of case they are working on. How should the administrator improve on the current implementation?",
+      "options": [
+        "Review which status choices are needed for each record type and create support processes for each that is necessary.",
+        "Create a Screen Flow that shows only the correct values for status and surface the flow in the utility bar of the console.",
+        "Edit the status choices directly on the record type.",
+        "Reduce the number of case status values to five."
+      ],
+      "correct_indices": [
+        0
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Los valores de Status de Case se controlan con support processes; hay que crear uno por record type con solo los estados que necesita."
+    },
+    {
+      "question_text": "The VP of sales at Cloud Kicks is receiving an error message that prevents them from saving an opportunity. The administrator attempted the same edit without receiving an error. How can the administrator validate the error the user is receiving?",
+      "options": [
+        "Review the sharing model.",
+        "Log in as the user.",
+        "Edit the page layout.",
+        "View the setup audit trail."
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Northern Trail Outfitters wants to know the average stage duration for all closed opportunities. How should the administrator support this request?",
+      "options": [
+        "Refresh weekly reporting snapshots for Closed Opportunities.",
+        "Use Process Builder to capture the daily average on each Opportunity.",
+        "Run the Opportunity Stage Duration report.",
+        "Add formula fields to track Stages on each Opportunity."
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Universal Containers' administrator has been asked to create a many-to-many relationship between two existing custom objects. Which two steps should the administrator take when enabling the many-to-many relationship?",
+      "options": [
+        "Create URL fields on a custom object",
+        "Create a junction with a custom object",
+        "Create two master-detail relationships on the new object",
+        "Create two lookup relationships on the new object"
+      ],
+      "correct_indices": [
+        1,
+        2
+      ]
+    },
+    {
+      "question_text": "Ursa Major Solar uses Opportunity to track sales of solar energy products. The company has two separate sales teams that focus on different energy markets. The services team also wants to use Opportunity to track installation. All three teams will need to use different fields and stages. How should the administrator configure this requirement?",
+      "options": [
+        "Create one sales process. Create one record type and three page layouts",
+        "Create three sales processes. Create three record types and one page layout",
+        "Create three sales processes. Create three record types and three page layouts",
+        "Create one sales process. Create three record types and three page layouts"
+      ],
+      "correct_indices": [
+        2
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Fases distintas = un sales process por equipo; campos distintos = un page layout por equipo; y un record type para unir cada proceso con su layout."
+    },
+    {
+      "question_text": "The administrator at Ursa Major Solar imported records into an object by mistake. Which two tools should be used to undo the import?",
+      "options": [
+        "Weekly Data Export",
+        "Data Import Wizard",
+        "Mass Delete Records",
+        "Data Loader"
+      ],
+      "correct_indices": [
+        2,
+        3
+      ]
+    },
+    {
+      "question_text": "The administrator at Cloud Kicks has been asked to change the company's Shoe Style field to prevent users from selecting more than one style on a record. Which two steps should an administrator do to accomplish this?",
+      "options": [
+        "Back up the Shoe Style values in existing records.",
+        "Select the \"Choose only one value\" checkbox on the picklist field.",
+        "Change the field type from a multi-select picklist field to a picklist field.",
+        "Reactivate the appropriate Shoe Style values after the field type changes."
+      ],
+      "correct_indices": [
+        0,
+        2
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Hay que cambiar el tipo de multi-select a picklist, y antes hacer copia de los valores porque el cambio puede perder datos."
+    },
+    {
+      "question_text": "Sales reps miss key fields when filling out an opportunity record through the sales process. Reps need to move forward in stages but are unable to enter a previous stage. Which three options should the administrator use to address this need?",
+      "options": [
+        "Use validation rules.",
+        "Enable guided selling",
+        "Mark fields required on the page layout.",
+        "Configure Opportunity Path.",
+        "Use Flow to mark fields required."
+      ],
+      "correct_indices": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "question_text": "The administrator for AW Computing is working with a user who is having trouble logging in to Salesforce. What should the administrator do to identify why the user is unable to log in?",
+      "options": [
+        "Check the attempted logins by running the setup audit trail.",
+        "Review the login history for the user.",
+        "Pull the password history to ensure the password policy was followed",
+        "Reset the security token for the profile"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks wants to give credit to Opportunity Team members based on the level of effort contributed by each person toward each deal. What feature should the administrator use to meet this requirement?",
+      "options": [
+        "Stages",
+        "Queues",
+        "List Views",
+        "Splits"
+      ],
+      "correct_indices": [
+        3
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks needs to change the owner of a case when it has been open for more than 7 days. How should the administrator complete this requirement?",
+      "options": [
+        "Auto-response Rules",
+        "Escalation Rules",
+        "Validation Rules",
+        "Assignment Rules"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "An administrator at Northern Trail Outfitters is creating a validation rule. Which two functions should the administrator use when creating a validation rule?",
+      "options": [
+        "Rule active date",
+        "Formula return type",
+        "Error message location",
+        "Error condition formula"
+      ],
+      "correct_indices": [
+        2,
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Una validation rule se define con una fórmula de condición de error, un mensaje y su ubicación."
+    },
+    {
+      "question_text": "Ursa Major Solar offers amazing experiences for all of its employees. The employee engagement committee wants to post updates while restricting other employees from posting. What should the administrator create to meet this request?",
+      "options": [
+        "Chatter Recommendations",
+        "Chatter Unlisted Group",
+        "Chatter Broadcast Group",
+        "Chatter Stream"
+      ],
+      "correct_indices": [
+        2
+      ]
+    },
+    {
+      "question_text": "Cloud Kicks wants users to only be able to choose Opportunity stage Closed Won if the Lead Source has been selected. How should the administrator accomplish this goal?",
+      "options": [
+        "Make the Opportunity stage a dependent picklist to the Lead Source field",
+        "Change the Opportunity stage field to read only on the Lead Source field",
+        "Make Lead Source a dependent picklist to the Opportunity stage field",
+        "Configure a validation rule requiring Lead Source when the stage is set to Closed Won"
+      ],
+      "correct_indices": [
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Una validation rule impide guardar Closed Won si Lead Source está vacío. Stage no puede ser picklist dependiente."
+    },
+    {
+      "question_text": "An analytics user at Cloud Kicks needs Read, Create and Edit access for objects and should be restricted from deleting any records. What should the administrator do to meet this requirement?",
+      "options": [
+        "Assign the standard System Administrator profile to the analytics user.",
+        "Create and assign a custom profile with Delete access removed for each object",
+        "Create and assign a permission set that includes Read, Create and Edit access",
+        "Give the user View All access and assign them to the role hierarchy"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "Sales users at Cloud Kicks are requesting that the data in the Industry field on the Account object displays on the Opportunity page layout. Which type of field should an administrator create to accomplish this?",
+      "options": [
+        "Master-detail relationship field",
+        "Cross-object formula field",
+        "Custom Account field",
+        "Standard Account field"
+      ],
+      "correct_indices": [
+        1
+      ]
+    },
+    {
+      "question_text": "An administrator gets a request from Human Resources to remove a user's access to Salesforce immediately. The user is part of a hierarchy field called Direct Manager. What should the administrator do to fulfill the request?",
+      "options": [
+        "Deactivate the user and delete any records where they are referenced in the Direct Manager field",
+        "Restrict the user's profile to read-only while removing them from being referenced in the Direct Manager field.",
+        "Remove the user from the allowlist on the restricted user email domain on the user's email field.",
+        "Freeze the user to prevent them from logging in while removing them from being referenced in the Direct Manager field"
+      ],
+      "correct_indices": [
+        3
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Un usuario referenciado en un campo jerárquico no se puede desactivar; se congela (freeze) para bloquear el acceso al instante mientras se quitan las referencias."
+    },
+    {
+      "question_text": "The service manager at Ursa Major Solar wants to let customers know that they have received their cases via email and their website. Medium-priority and high-priority cases should receive different email notifications than low-priority cases. The administrator has created three email templates for this purpose. How should an administrator configure this requirement?",
+      "options": [
+        "Create one auto-response rule. Configure three rule entry criteria and set a filter for case priority. Select the appropriate email template for each rule entry.",
+        "Include three assignment rules that fire when the cases are created. Add a filter for case priority. Select the appropriate email template for each rule.",
+        "Add three auto-response rules. Configure one rule entry criteria for each rule and set a filter for case priority. Select appropriate email template for each rule entry.",
+        "Configure one workflow rule that fires when cases are created. Add a filter for case priority. Select the appropriate email template for the rule."
+      ],
+      "correct_indices": [
+        0
+      ],
+      "explanation": "Respuesta propuesta (no viene de una clave oficial): Solo puede haber una auto-response rule activa, con varias entradas; cada entrada filtra por prioridad y usa su plantilla."
+    },
+    {
+      "question_text": "An administrator at Universal Containers needs an automated way to delete records based on field values. What automated solution should the administrator use?",
+      "options": [
+        "Flow Builder",
+        "Automation Studio",
+        "Workflow",
+        "Process Builder"
+      ],
+      "correct_indices": [
+        0
+      ]
+    }
+  ]
+}

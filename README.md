@@ -6,7 +6,7 @@ funciona incluso sin conexión una vez cargada.
 
 Tiene dos apartados, que se eligen arriba a la derecha:
 
-- **Administrador** (ADM 201): 12 exámenes, 741 preguntas.
+- **Administrador** (ADM 201): 13 exámenes, 805 preguntas.
 - **Developer** (Platform Developer I): 1 examen, 60 preguntas.
 
 Cada apartado tiene sus propios exámenes, repaso y estadísticas. La web
@@ -22,7 +22,7 @@ recuerda el último apartado usado.
 ### Modos
 
 1. **Practicar** — elige examen y modo:
-   - Cada sesión usa **todas** las preguntas del examen (60, 63 o 65 según
+   - Cada sesión usa **todas** las preguntas del examen (60, 63, 64 o 65 según
      cuál), siempre en orden aleatorio.
    - *Práctica libre*: feedback inmediato tras cada respuesta.
    - *Simulacro cronometrado*: sin feedback hasta el final, con tiempo límite.
@@ -144,3 +144,18 @@ el formulario no publica las respuestas correctas:
 - Las otras 30 las resolvió Claude. Llevan una explicación que empieza por
   "Respuesta propuesta", que se ve al corregir. Si alguna no te convence, corrígela en
   `data/exams/admin-su22-examen-2.json`.
+
+## Notas sobre el examen "Admin SU22 Examen 1"
+
+Viene de un formulario de Google Forms ("Admin - SU22 - 1") impreso a PDF
+(`salesforceform2.pdf`). El PDF es solo imagen, sin texto, así que
+`import-pdfs.js` no lo puede leer: las preguntas se transcribieron a mano en
+`data/exams/admin-su22-examen-1.json`. El formulario salta de la 42 a la 44,
+así que tiene 64 preguntas, no 65.
+
+Como el formulario no publica las respuestas:
+
+- 37 preguntas ya estaban en otros exámenes (sobre todo el 10 y el 11), y sus
+  respuestas se copiaron de ahí.
+- Las otras 27 las resolvió Claude y llevan una explicación que empieza por
+  "Respuesta propuesta". Si alguna no te convence, corrígela en el JSON.
